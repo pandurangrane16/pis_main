@@ -1,0 +1,59 @@
+<mat-card class="cardWithShadow">
+  <mat-card-content>
+    <mat-card-title>{{_headerName}}</mat-card-title>
+    <hr>
+    <div class="table-responsive">
+      <table class="w-100" id="datatableexample">
+        <thead class="table-dark">
+          <tr>
+            <th>Sr No.</th>
+            <th class="f-w-600 f-s-14 p-l-0" *ngFor="let column of displayedColumns" >{{column.Head}}</th>
+          </tr>
+        </thead>
+        <br>
+        <tbody>
+          <tr *ngFor="let item of dataSource;let sr=index" (click)="ShowForm(item)" class="p-l-0 text-center">
+            <td>{{sr+1}}</td>
+            <td *ngFor="let head of displayedColumns">
+              <span *ngIf="head.FieldName != 'isActive' && head.FieldName != 'actions' && head.FieldName != 'statusText' && head.type != 'datetime'" >{{item[head.FieldName]}}</span>
+              <span *ngIf="head.FieldName != 'isActive' && head.FieldName != 'actions' && head.FieldName != 'statusText' && head.type == 'datetime'" >{{item[head.FieldName] | date:'dd-MM-YYYY HH:mm:ss'}}</span>
+              <span *ngIf="head.FieldName == 'isActive' && item[head.FieldName] == 'Active'" class="badge badge-success">{{item[head.FieldName]}}</span>
+              <span *ngIf="head.FieldName == 'isActive' && item[head.FieldName] == 'In Active'" class="badge badge-danger">{{item[head.FieldName]}}</span>
+              <span *ngIf="head.FieldName == 'statusText'" [class]="item.class">{{item[head.FieldName]}}</span>
+              <span *ngIf="head.type == 'checkbox'">
+                <input  class="chkBox" (change)="Checked($event,item)"
+                type="checkbox" id="defaultCheck1">
+              </span>
+              <span *ngIf="head.FieldName == 'actions' && btnArray.length > 0">
+                <!-- <button mat-icon-button *ngFor="let btn of btnArray" type="button" (click)="GoToBtnAction(btn,item)">
+                <mat-icon>add</mat-icon>
+                <span>Add</span>
+              </button> -->
+              <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>add</mat-icon>
+                  <span>Add</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>edit</mat-icon>
+                  <span>Edit</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>delete</mat-icon>
+                  <span>Delete</span>
+                </button>
+              </mat-menu>
+            </span>
+            </td>
+            <!-- <td *ngIf="btnArray.length > 0">
+              
+            </td> -->
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </mat-card-content>
+</mat-card>

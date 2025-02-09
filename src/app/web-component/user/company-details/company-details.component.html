@@ -1,0 +1,29 @@
+<mat-card class="cardWithShadow">
+    <mat-card-content>
+        <div class="hstack align-items-center flex-column flex-lg-row m-b-20">
+            <div class="col-md-12">
+                <app-tables _headerName="Company Details" [dataSource]="_compData" [displayedColumns]="displayedColumnsComp" ></app-tables>
+            </div>
+        </div>
+        <div class="hstack align-items-center flex-column flex-lg-row m-b-20">
+            <div class="col-md-4">
+                <button mat-flat-button color="primary" class="m-r-8">Edit Company Details</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card class="cardWithShadow">
+    <mat-card-content>
+        <div class="hstack align-items-center flex-column flex-lg-row m-b-20">
+            <div class="col-md-12">
+                <app-tables _headerName="Documents Details" [btnArray]="btnArray" [dataSource]="_docData" [displayedColumns]="displayedColumnsDoc" ></app-tables>
+            </div>
+        </div>
+        <div class="hstack align-items-center flex-column flex-lg-row m-b-20">
+            <div class="col-md-4">
+                <button mat-flat-button color="primary" class="m-r-8">Upload Documents</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
