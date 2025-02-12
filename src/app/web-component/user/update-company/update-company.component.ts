@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MaterialModule } from 'src/app/material.module';
 import * as _moment from 'moment';
@@ -6,6 +6,7 @@ import moment from 'moment';
 import { MatDatepicker } from '@angular/material/datepicker';
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 export const MY_FORMATS = {
   parse: {
     dateInput: 'LL',
@@ -19,14 +20,15 @@ export const MY_FORMATS = {
 };
 @Component({
   selector: 'app-update-company',
-  imports: [MaterialModule],
+  imports: [MaterialModule,CmInputComponent],
   templateUrl: './update-company.component.html',
   styleUrl: './update-company.component.scss',
   providers:[{provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
   {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},]
 })
 
-export class UpdateCompanyComponent {
+export class UpdateCompanyComponent implements OnInit {
+  inputJson:any;
   date = new FormControl(moment());
   country: Food[] = [
     { value: 'steak-0', viewValue: 'USA' },
@@ -54,6 +56,17 @@ export class UpdateCompanyComponent {
   ];
 
   selectedState = this.state[3].value;
+
+  ngOnInit(): void {
+    this.inputJson = {
+      labelClass : "f-w-600 m-b-8 d-block",
+      labelHeader : "Company Name",
+      placeholder : "Company Name",
+      appearance : "outline",
+      color : "primary",
+      formFieldClass: "w-100"
+    }
+  }
 }
 
 

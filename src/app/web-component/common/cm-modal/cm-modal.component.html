@@ -1,0 +1,32 @@
+<mat-dialog-content>
+    <mat-card class="cardWithShadow theme-card">
+        <mat-card-header>
+            <mat-card-title class="m-b-0">Upload Document</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="b-t-1">
+            <form>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- input -->
+                        <app-cm-input [_inputData]="inputJson"></app-cm-input>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- input -->
+                        <mat-label class="f-w-600 m-b-8 d-block">Upload</mat-label>
+                        <mat-form-field appearance="outline" class="w-100" color="primary">
+                            <input type="file" placeholder="Upload Document" />
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <button mat-flat-button color="primary" class="m-r-8">Submit</button>
+                        <button mat-stroked-button color="warn">Close</button>
+                    </div>
+                </div>
+            </form>
+        </mat-card-content></mat-card>
+  
+</mat-dialog-content>
