@@ -5,23 +5,18 @@ import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.
 
 @Component({
   selector: 'app-cm-modal',
-  imports: [MaterialModule,CmInputComponent],
+  imports: [MaterialModule, CmInputComponent],
+  standalone:true,
   templateUrl: './cm-modal.component.html',
   styleUrl: './cm-modal.component.scss'
 })
-export class CmModalComponent implements OnInit{
-  ngOnInit(): void {
-    this.inputJson = {
-      labelClass : "f-w-600 m-b-8 d-block",
-      labelHeader : "Company Name",
-      placeholder : "Company Name",
-      appearance : "outline",
-      color : "primary",
-      formFieldClass: "w-100"
-    }
+export class CmModalComponent implements OnInit {
+  @Input() data: any;
+  ngOnInit() {
+    console.log(this.data);
   }
-  @Input() _controls:any;
-  inputJson :any;
+  @Input() _controls: any;
+  inputJson: any;
 
-  
+
 }

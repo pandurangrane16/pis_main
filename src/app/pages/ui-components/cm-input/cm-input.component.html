@@ -1,5 +1,9 @@
-    <!-- input -->
-    <mat-label [class]="_inputData.labelClass">{{_inputData.labelHeader}}</mat-label>
-    <mat-form-field [appearance]="_inputData.appearance" [class]="_inputData.formFieldClass" [color]="_inputData.color">
-        <input matInput [placeholder]="_inputData.placeholder" />
-    </mat-form-field>
+<mat-form-field [appearance]="_inputData.appearance" 
+                [class]="_inputData.formFieldClass" 
+                [color]="_inputData.color">
+  
+  <mat-label [class]="_inputData.labelClass">{{_inputData.labelHeader}}</mat-label>
+  
+  <input matInput [placeholder]="_inputData.placeholder" />
+  
+</mat-form-field>

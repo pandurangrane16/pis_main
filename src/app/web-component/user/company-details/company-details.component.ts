@@ -48,7 +48,18 @@ export class CompanyDetailsComponent implements OnInit{
   }
 
   uploadDoc(){
-    const modalRef = this.dialog.open(CmModalComponent);
+    //const modalRef = this.dialog.open(CmModalComponent);
+    let inputJson = {
+      labelClass : "f-w-600 m-b-8 d-block",
+      labelHeader : "Company Name",
+      placeholder : "Company Name",
+      appearance : "outline",
+      color : "primary",
+      formFieldClass: "w-100"
+    }
+    this.dialog.open(CmModalComponent, {
+      data: { inputJson }, // Ensure data is passed correctly
+    });
   }
 
   onNoClick(): void {
