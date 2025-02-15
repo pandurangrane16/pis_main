@@ -5,7 +5,7 @@
     <input matInput
            aria-label="State"
            [matAutocomplete]="auto"
-           [formControl]="stateCtrl">
+           [formControl]="stateCtrl" [disabled]="settings.isDisabled" />
     <mat-autocomplete #auto="matAutocomplete">
       @for (state of filteredOptions | async; track state) {
         <mat-option [value]="state.name">
@@ -14,3 +14,7 @@
       }
     </mat-autocomplete>
   </mat-form-field>
+
+  <mat-slide-toggle style="display: none;"
+    [checked]="settings.isDisabled">
+  </mat-slide-toggle>

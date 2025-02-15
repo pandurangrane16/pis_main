@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import {AsyncPipe} from '@angular/common';
+import {AsyncPipe, CommonModule} from '@angular/common';
 import { map, Observable, startWith } from 'rxjs';
 import { MaterialModule } from 'src/app/material.module';
 
 @Component({
   selector: 'app-cm-select2',
-  imports: [MaterialModule,AsyncPipe],
+  imports: [MaterialModule,AsyncPipe,CommonModule],
   templateUrl: './cm-select2.component.html',
   styleUrl: './cm-select2.component.scss'
 })
