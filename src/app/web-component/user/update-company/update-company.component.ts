@@ -8,6 +8,8 @@ import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { companyUpdate } from 'src/assets/forms_control/companyUpdate';
+import { CmSelectComponent } from 'src/app/pages/ui-components/cm-select/cm-select.component';
+import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
 export const MY_FORMATS = {
   parse: {
     dateInput: 'LL',
@@ -21,7 +23,7 @@ export const MY_FORMATS = {
 };
 @Component({
   selector: 'app-update-company',
-  imports: [MaterialModule,CmInputComponent],
+  imports: [MaterialModule,CmInputComponent,CmSelect2Component],
   standalone:true,
   templateUrl: './update-company.component.html',
   styleUrl: './update-company.component.scss',

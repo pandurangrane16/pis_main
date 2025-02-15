@@ -45,16 +45,7 @@
                     <app-cm-input [_inputData]="companyUpdateForm.inputPcsId"></app-cm-input>
                 </div>
                 <div class="col-lg-4">
-                    <mat-label class="f-w-600 m-b-8 d-block">State</mat-label>
-                    <mat-form-field appearance="outline" class="w-100">
-                        <mat-select [(value)]="selectedState">
-                            @for(option of state; track option.value) {
-                            <mat-option [value]="option.value">{{
-                                option.viewValue
-                                }}</mat-option>
-                            }
-                        </mat-select>
-                    </mat-form-field>
+                    <app-cm-select2 [settings]="companyUpdateForm.selectStateList"></app-cm-select2>
                 </div>
                 <div class="col-lg-5">
                     <!-- input -->
