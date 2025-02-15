@@ -7,6 +7,7 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
+import { companyUpdate } from 'src/assets/forms_control/companyUpdate';
 export const MY_FORMATS = {
   parse: {
     dateInput: 'LL',
@@ -21,6 +22,7 @@ export const MY_FORMATS = {
 @Component({
   selector: 'app-update-company',
   imports: [MaterialModule,CmInputComponent],
+  standalone:true,
   templateUrl: './update-company.component.html',
   styleUrl: './update-company.component.scss',
   providers:[{provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
@@ -28,7 +30,9 @@ export const MY_FORMATS = {
 })
 
 export class UpdateCompanyComponent implements OnInit {
-  inputJson:any;
+  inputName:any;
+  inputEmail:any;
+  isGst:string="false";
   date = new FormControl(moment());
   country: Food[] = [
     { value: 'steak-0', viewValue: 'USA' },
@@ -56,15 +60,18 @@ export class UpdateCompanyComponent implements OnInit {
   ];
 
   selectedState = this.state[3].value;
-
+  companyUpdateForm =new companyUpdate();
+  _inputName :any;
   ngOnInit(): void {
-    this.inputJson = {
-      labelClass : "f-w-600 m-b-8 d-block",
-      labelHeader : "Company Name",
-      placeholder : "Company Name",
-      appearance : "outline",
-      color : "primary",
-      formFieldClass: "w-100"
+    this._inputName = this.companyUpdateForm.inputName;
+  }
+
+  gstChange(){
+    console.log(this.isGst);
+    if(this.isGst == "true") {
+      this.companyUpdateForm.inputGstNum.isDisabled = true;
+    } else {
+      this.companyUpdateForm.inputGstNum.isDisabled = false;
     }
   }
 }

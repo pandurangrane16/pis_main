@@ -7,35 +7,23 @@
             <div class="row">
                 <div class="col-lg-8">
                     <!-- input -->
-                    <app-cm-input [_inputData]="inputJson"></app-cm-input>
+                    <app-cm-input [_inputData]="_inputName"></app-cm-input>
                 </div>
                 <div class="col-lg-4">
                     <!-- input -->
-                    <mat-label class="f-w-600 m-b-8 d-block">Email</mat-label>
-                    <mat-form-field appearance="outline" class="w-100" color="primary">
-                        <input matInput placeholder="Email Address" />
-                    </mat-form-field>
+                    <app-cm-input [_inputData]="companyUpdateForm.inputEmail"></app-cm-input>
                 </div>
                 <div class="col-lg-8">
                     <!-- input -->
-                    <mat-label class="f-w-600 m-b-8 d-block">Company Address</mat-label>
-                    <mat-form-field appearance="outline" class="w-100" color="primary">
-                        <input matInput placeholder="Address" />
-                    </mat-form-field>
+                    <app-cm-input [_inputData]="companyUpdateForm.inputCompAdd"></app-cm-input>
                 </div>
                 <div class="col-lg-4">
                     <!-- input -->
-                    <mat-label class="f-w-600 m-b-8 d-block">Contact Number</mat-label>
-                    <mat-form-field appearance="outline" class="w-100" color="primary">
-                        <input matInput placeholder="Contact Number" />
-                    </mat-form-field>
+                    <app-cm-input [_inputData]="companyUpdateForm.inputContNum"></app-cm-input>
                 </div>
                 <div class="col-lg-6">
                     <!-- input -->
-                    <mat-label class="f-w-600 m-b-8 d-block">Recommending Company</mat-label>
-                    <mat-form-field appearance="outline" class="w-100" color="primary">
-                        <input matInput placeholder="Recommending Company" />
-                    </mat-form-field>
+                    <app-cm-input [_inputData]="companyUpdateForm.inputRecComp"></app-cm-input>
                 </div>
                 <div class="col-lg-6">
                     <mat-card class="b-1 shadow-none">
@@ -43,22 +31,18 @@
                             <mat-card-title>Registered For GST</mat-card-title>
                         </mat-card-header>
                         <mat-card-content class="b-t-1">
-                            <mat-chip-listbox aria-label="Fish selection">
-                                <mat-chip-option class="f-s-14" color="primary">Yes</mat-chip-option>
-                                <mat-chip-option class="f-s-14" selected>No</mat-chip-option>
+                            <mat-chip-listbox aria-label="Fish selection" [(ngModel)]="isGst" name="isGst" (change)="gstChange()">
+                                <mat-chip-option class="f-s-14" selected value="true">Yes</mat-chip-option>
+                                <mat-chip-option class="f-s-14" color="primary" value="false">No</mat-chip-option>
                             </mat-chip-listbox>
-                            <mat-form-field appearance="outline" class="w-100" color="primary">
-                                <input matInput placeholder="GST Number" />
-                            </mat-form-field>
+                            <br>
+                            <app-cm-input [_inputData]="companyUpdateForm.inputGstNum"></app-cm-input>
                         </mat-card-content>
                     </mat-card>
                 </div>
                 <div class="col-lg-3">
                     <!-- input -->
-                    <mat-label class="f-w-600 m-b-8 d-block">PCS ID</mat-label>
-                    <mat-form-field appearance="outline" class="w-100" color="primary">
-                        <input matInput placeholder="PCS ID" />
-                    </mat-form-field>
+                    <app-cm-input [_inputData]="companyUpdateForm.inputPcsId"></app-cm-input>
                 </div>
                 <div class="col-lg-4">
                     <mat-label class="f-w-600 m-b-8 d-block">State</mat-label>
@@ -74,10 +58,7 @@
                 </div>
                 <div class="col-lg-5">
                     <!-- input -->
-                    <mat-label class="f-w-600 m-b-8 d-block">PAN Number</mat-label>
-                    <mat-form-field appearance="outline" class="w-100" color="primary">
-                        <input matInput placeholder="PAN Number" />
-                    </mat-form-field>
+                    <app-cm-input [_inputData]="companyUpdateForm.inputPANNum"></app-cm-input>
                 </div>
                 <div class="col-lg-6">
                     <!-- input -->
@@ -89,10 +70,7 @@
                     </mat-form-field>
                 </div>
                 <div class="col-lg-6">
-                    <mat-label class="f-w-600 m-b-8 d-block">Licence/Document Expiry Date</mat-label>
-                    <mat-form-field appearance="outline" class="w-100" color="primary">
-                        <input matInput placeholder="Licence/Document Expiry Date" />
-                    </mat-form-field>
+                    <app-cm-input [_inputData]="companyUpdateForm.inputLicExp"></app-cm-input>
                 </div>
             </div>
             <div class="row">

@@ -1,0 +1,10 @@
+<mat-label [class]="settings.lableClass">State</mat-label>
+                    <mat-form-field [appearance]="settings.outline" [class]="settings.formFieldClass">
+                        <mat-select [(value)]="selectedVal">
+                            @for(option of settings.options; track option.value) {
+                            <mat-option [value]="option.value">{{
+                                option.viewValue
+                                }}</mat-option>
+                            }
+                        </mat-select>
+                    </mat-form-field>

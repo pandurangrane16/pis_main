@@ -12,6 +12,7 @@ import {
   MatDialogRef,
   MatDialogTitle,
 } from '@angular/material/dialog';
+import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 @Component({
   selector: 'app-company-details',
   standalone:true,
@@ -51,8 +52,8 @@ export class CompanyDetailsComponent implements OnInit{
     //const modalRef = this.dialog.open(CmModalComponent);
     let inputJson = {
       labelClass : "f-w-600 m-b-8 d-block",
-      labelHeader : "Company Name",
-      placeholder : "Company Name",
+      labelHeader : "Document Name*",
+      placeholder : "Document Name",
       appearance : "outline",
       color : "primary",
       formFieldClass: "w-100"
