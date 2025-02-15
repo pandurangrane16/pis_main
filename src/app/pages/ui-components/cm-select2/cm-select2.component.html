@@ -1,9 +1,16 @@
+
+<mat-label>{{settings.labelHeader}}</mat-label>
+<hr>
 <mat-form-field [class]="settings.formFieldClass">
-    <mat-label>{{settings.labelHeader}}</mat-label>
-    <input type="text" matInput [formControl]="myControl" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
-        @for (option of settings.options; track option) {
-        <mat-option [value]="option.value">{{option.name}}</mat-option>
-        }
+    <input matInput
+           aria-label="State"
+           [matAutocomplete]="auto"
+           [formControl]="stateCtrl">
+    <mat-autocomplete #auto="matAutocomplete">
+      @for (state of filteredOptions | async; track state) {
+        <mat-option [value]="state.name">
+          <span>{{state.name}}</span>
+        </mat-option>
+      }
     </mat-autocomplete>
-</mat-form-field>
+  </mat-form-field>

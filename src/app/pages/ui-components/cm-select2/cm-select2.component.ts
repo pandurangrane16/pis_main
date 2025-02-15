@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import {AsyncPipe} from '@angular/common';
 import { map, Observable, startWith } from 'rxjs';
 import { MaterialModule } from 'src/app/material.module';
 
 @Component({
   selector: 'app-cm-select2',
-  imports: [MaterialModule],
+  imports: [MaterialModule,AsyncPipe],
   templateUrl: './cm-select2.component.html',
   styleUrl: './cm-select2.component.scss'
 })
@@ -13,19 +14,22 @@ export class CmSelect2Component {
   myControl = new FormControl<string | any>('');
   selectedItem :any;
   @Input() settings:any;
+  stateCtrl = new FormControl('');
   filteredOptions: Observable<any[]>;
 
-  
+  constructor(){
+    this.filteredOptions = this.stateCtrl.valueChanges.pipe(
+      startWith(''),
+      map(state => (state ? this._filterStates(state) : this.settings.options.slice())),
+    );
+  }
+  private _filterStates(value: string): any[] {
+    const filterValue = value.toLowerCase();
+
+    return this.settings.options.filter((state:any) => state.name.toLowerCase().includes(filterValue));
+  }
   ngOnInit(): void {
     console.log(this.settings);
-
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(''),
-      map(value => {
-        const name = typeof value === 'string' ? value : value?.name;
-        return name ? this._filter(name as string) : this.settings.options.slice();
-      }),
-    );
   }
   displayFn(option: any): string {
     return option && option.name ? option.name : '';
