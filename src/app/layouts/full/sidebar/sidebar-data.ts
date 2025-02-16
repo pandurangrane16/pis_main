@@ -39,7 +39,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Add/View User Details',
     iconName: 'solar:widget-add-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard1',
+    route: '/user/appuser-details',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',

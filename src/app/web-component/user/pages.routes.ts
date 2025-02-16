@@ -5,6 +5,7 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
 import { UpdateCompanyComponent } from './update-company/update-company.component';
 import { ListVehicleComponent } from './vehicle/list-vehicle/list-vehicle.component';
 import { VehicleManagementComponent } from './vehicle/vehicle-management/vehicle-management.component';
+import { ListAppuserComponent } from './appuser/list-appuser/list-appuser.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -72,5 +73,17 @@ export const PagesRoutes: Routes = [
         { title: 'Vehicle Management' },
       ],
     },
-  }
+  },
+  
+  {
+    path: 'appuser-details',
+    component: ListAppuserComponent,
+    data: {
+      title: 'App User Details',
+      urls: [
+        { title: 'App User Details', url: '/appuser-details' },
+        { title: 'App User Details' },
+      ],
+    },
+  },
 ];
