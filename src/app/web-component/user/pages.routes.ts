@@ -3,6 +3,8 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { UpdateCompanyComponent } from './update-company/update-company.component';
+import { ListVehicleComponent } from './vehicle/list-vehicle/list-vehicle.component';
+import { VehicleManagementComponent } from './vehicle/vehicle-management/vehicle-management.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -49,4 +51,26 @@ export const PagesRoutes: Routes = [
       ],
     },
   },
+  {
+    path: 'vehicle-details',
+    component: ListVehicleComponent,
+    data: {
+      title: 'Vehicle Details',
+      urls: [
+        { title: 'Vehicle Details', url: '/vehicle-details' },
+        { title: 'Vehicle Details' },
+      ],
+    },
+  },
+  {
+    path: 'vehicle-management',
+    component: VehicleManagementComponent,
+    data: {
+      title: 'Vehicle Management',
+      urls: [
+        { title: 'Vehicle Management', url: '/vehicle-management' },
+        { title: 'Vehicle Management' },
+      ],
+    },
+  }
 ];

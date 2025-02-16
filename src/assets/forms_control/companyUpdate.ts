@@ -85,7 +85,7 @@ export class companyUpdate {
     appearance: "outline",
     color: "primary",
     formFieldClass: "w-100",
-    isDisabled: false
+    isDisabled: true
   };
 
   public selectStateList = {

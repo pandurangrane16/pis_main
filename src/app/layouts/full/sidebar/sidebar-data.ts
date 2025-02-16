@@ -34,7 +34,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Add/View Vehicle Details',
     iconName: 'solar:atom-line-duotone',
-    route: '/dashboard',
+    route: '/user/vehicle-details',
   },
   {
     displayName: 'Add/View User Details',
