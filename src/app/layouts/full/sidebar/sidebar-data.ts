@@ -48,7 +48,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Add/View Crew Details',
     iconName: 'solar:chart-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard2',
+    route: '/user/crew-details',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',
@@ -57,7 +57,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Add/View Foreigner Details',
     iconName: 'solar:screencast-2-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard3',
+    route: '/user/foreigner-details',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',

@@ -6,6 +6,7 @@ import { UpdateCompanyComponent } from './update-company/update-company.componen
 import { ListVehicleComponent } from './vehicle/list-vehicle/list-vehicle.component';
 import { VehicleManagementComponent } from './vehicle/vehicle-management/vehicle-management.component';
 import { ListAppuserComponent } from './appuser/list-appuser/list-appuser.component';
+import { CrewListComponent } from './crews/crew-list/crew-list.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -83,6 +84,18 @@ export const PagesRoutes: Routes = [
       urls: [
         { title: 'App User Details', url: '/appuser-details' },
         { title: 'App User Details' },
+      ],
+    },
+  },
+  
+  {
+    path: 'crew-details',
+    component: CrewListComponent,
+    data: {
+      title: 'Crew Details',
+      urls: [
+        { title: 'Crew Details', url: '/crew-details' },
+        { title: 'Crew Details' },
       ],
     },
   },
