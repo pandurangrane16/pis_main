@@ -63,7 +63,9 @@ export class AppNavItemComponent implements OnChanges {
 
   openExternalLink(url: string): void {
     if (url) {
-      window.open(url, '_blank');
+      this.router.navigate([url]);
+      //window.open(url, '_blank');
+
     }
   }
 

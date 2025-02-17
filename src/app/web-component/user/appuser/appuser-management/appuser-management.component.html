@@ -1,1 +1,125 @@
-<p>appuser-management works!</p>
+<mat-card class="cardWithShadow theme-card modal-form">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">{{headerName}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="b-t-1">
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <mat-form-field>
+                        <mat-label>Select User Image*</mat-label>
+                        <mat-toolbar>
+                            <input matInput [value]="selectedFileNames.length ? selectedFileNames : ''" readonly="true" />
+                        </mat-toolbar>
+
+                        <input type="file" id="fileInput" name="fileInput" accept="image/*"
+                            (change)="selectFiles($event)" />
+                    </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                    <img *ngFor='let preview of previews' [src]="preview" class="preview" height="150" width="150">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <!-- input -->
+                    <app-cm-input [_inputData]="appUserMng.inputName"></app-cm-input>
+                </div>
+                <div class="col-lg-6">
+                    <!-- input -->
+                    <app-cm-input [_inputData]="appUserMng.inputFathersName"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-select2 [settings]="appUserMng.selectGender"></app-cm-select2>
+                </div>
+                <div class="col-lg-4">
+                    <!-- input -->
+                    <mat-label class="f-w-600 m-b-8 d-block">Date Of Birth</mat-label>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="dp" placeholder="Issue Date" [formControl]="date">
+                        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                        <mat-datepicker #dp></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputAge"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- input -->
+                    <app-cm-input [_inputData]="appUserMng.inputMobileNo"></app-cm-input>
+                </div>
+                <div class="col-lg-4">
+                    <!-- input -->
+                    <app-cm-input [_inputData]="appUserMng.inputEmail"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputAdharNo"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputPassportNo"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputIdentificationMark"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputElectionCardNo"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <app-cm-select2 [settings]="appUserMng.selectDesignation"></app-cm-select2>
+                </div>
+                <div class="col-md-6">
+                    <app-cm-input [_inputData]="appUserMng.inputDrivingLicense"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputGovtEmpId"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputRecommendingComp"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="appUserMng.inputTitle"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- input -->
+                    <app-cm-input [_inputData]="appUserMng.inputPresentAddress"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- input -->
+                    <app-cm-input [_inputData]="appUserMng.inputPermanantAddress"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- input -->
+                    <mat-label class="f-w-600 m-b-8 d-block">Upload</mat-label>
+                    <input type="file" placeholder="Upload Document" />
+                </div>
+            </div>
+            <br>
+            <hr>
+            <div class="row">
+                <div class="col-lg-6">
+                    <button mat-flat-button color="primary" class="m-r-8">Submit</button>
+                    <button mat-stroked-button color="warn">Cancel</button>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <button mat-stroked-button color="secondary" class="m-r-8" (click)="closeModal()">Close</button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

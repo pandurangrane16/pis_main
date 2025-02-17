@@ -4,13 +4,14 @@ import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.co
 import { VehicleManagementComponent } from '../../vehicle/vehicle-management/vehicle-management.component';
 import { appUserMng } from 'src/assets/forms_control/appuserMng';
 import { MatDialog } from '@angular/material/dialog';
+import { AppuserManagementComponent } from '../appuser-management/appuser-management.component';
 
 @Component({
   selector: 'app-list-appuser',
   imports: [MaterialModule,AppTablesComponent],
   templateUrl: './list-appuser.component.html',
   styleUrl: './list-appuser.component.scss',
-  providers:[appUserMng]
+  providers:[appUserMng,AppuserManagementComponent]
 })
 export class ListAppuserComponent {
 totalPages: number = 10;
@@ -53,7 +54,7 @@ totalPages: number = 10;
   }
 
   AddVehicle() {
-    this.dialog.open(VehicleManagementComponent, {
+    this.dialog.open(AppuserManagementComponent, {
       data:{mode:"add"}
     });
   }
