@@ -7,6 +7,7 @@ import { ListVehicleComponent } from './vehicle/list-vehicle/list-vehicle.compon
 import { VehicleManagementComponent } from './vehicle/vehicle-management/vehicle-management.component';
 import { ListAppuserComponent } from './appuser/list-appuser/list-appuser.component';
 import { CrewListComponent } from './crews/crew-list/crew-list.component';
+import { ForeignerListComponent } from './foreigner/foreigner-list/foreigner-list.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -96,6 +97,18 @@ export const PagesRoutes: Routes = [
       urls: [
         { title: 'Crew Details', url: '/crew-details' },
         { title: 'Crew Details' },
+      ],
+    },
+  },
+
+  {
+    path: 'foreigner-details',
+    component: ForeignerListComponent,
+    data: {
+      title: 'Foreigner Details',
+      urls: [
+        { title: 'Foreigner Details', url: '/foreigner-details' },
+        { title: 'Foreigner Details' },
       ],
     },
   },
