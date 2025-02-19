@@ -9,6 +9,7 @@ import { ListAppuserComponent } from './appuser/list-appuser/list-appuser.compon
 import { CrewListComponent } from './crews/crew-list/crew-list.component';
 import { ForeignerListComponent } from './foreigner/foreigner-list/foreigner-list.component';
 import { BlacklistedUserComponent } from './blacklisted-user/blacklisted-user.component';
+import { RequestRfidComponent } from '../rfid/request-rfid/request-rfid.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -122,6 +123,18 @@ export const PagesRoutes: Routes = [
       urls: [
         { title: 'Blacklisted User', url: '/blacklisted-user' },
         { title: 'Blacklisted User' },
+      ],
+    },
+  },
+
+  {
+    path: 'request-rfid',
+    component: RequestRfidComponent,
+    data: {
+      title: 'Request RFID',
+      urls: [
+        { title: 'Request RFID', url: '/request-rfid' },
+        { title: 'Request RFID' },
       ],
     },
   },

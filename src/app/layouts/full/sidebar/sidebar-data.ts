@@ -79,12 +79,12 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Request RFID',
     iconName: 'solar:atom-line-duotone',
-    route: '/dashboard',
+    route: '/user/request-rfid',
   },
   {
     displayName: 'RFID Refund Request',
     iconName: 'solar:widget-add-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard1',
+    route: '/user/request-rfid',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',
