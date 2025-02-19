@@ -66,7 +66,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Blacklisted Users',
     iconName: 'solar:screencast-2-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard3',
+    route: '/user/blacklisted-user',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',

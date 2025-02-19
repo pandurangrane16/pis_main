@@ -8,6 +8,7 @@ import { VehicleManagementComponent } from './vehicle/vehicle-management/vehicle
 import { ListAppuserComponent } from './appuser/list-appuser/list-appuser.component';
 import { CrewListComponent } from './crews/crew-list/crew-list.component';
 import { ForeignerListComponent } from './foreigner/foreigner-list/foreigner-list.component';
+import { BlacklistedUserComponent } from './blacklisted-user/blacklisted-user.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -109,6 +110,18 @@ export const PagesRoutes: Routes = [
       urls: [
         { title: 'Foreigner Details', url: '/foreigner-details' },
         { title: 'Foreigner Details' },
+      ],
+    },
+  },
+
+  {
+    path: 'blacklisted-user',
+    component: BlacklistedUserComponent,
+    data: {
+      title: 'Blacklisted User',
+      urls: [
+        { title: 'Blacklisted User', url: '/blacklisted-user' },
+        { title: 'Blacklisted User' },
       ],
     },
   },
