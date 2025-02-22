@@ -4,13 +4,14 @@ import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
 import { requestRfid } from 'src/assets/forms_control/requestRfid';
 import { PurchasedRfidComponent } from '../purchased-rfid/purchased-rfid.component';
+import { CmModalComponent } from '../../common/cm-modal/cm-modal.component';
 
 @Component({
   selector: 'app-request-rfid',
   imports: [MaterialModule, AppTablesComponent],
   templateUrl: './request-rfid.component.html',
   styleUrl: './request-rfid.component.scss',
-  providers: [requestRfid, PurchasedRfidComponent]
+  providers: [requestRfid, PurchasedRfidComponent,CmModalComponent]
 })
 export class RequestRfidComponent {
   totalPages: number = 10;
@@ -55,13 +56,13 @@ export class RequestRfidComponent {
   }
 
   OpenModal(type: number) {
-    if(type == 0){
+    if(type == 1){
       this.dialog.open(PurchasedRfidComponent, {
         data: { mode: "add" }
       });
-    } else if(type == 1) {
-      this.dialog.open(PurchasedRfidComponent, {
-        data: { mode: "add" }
+    } else if(type == 0) {
+      this.dialog.open(CmModalComponent, {
+        data: { type: "rfid" }
       });
     }
   }
