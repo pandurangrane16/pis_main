@@ -10,6 +10,7 @@ import { CrewListComponent } from './crews/crew-list/crew-list.component';
 import { ForeignerListComponent } from './foreigner/foreigner-list/foreigner-list.component';
 import { BlacklistedUserComponent } from './blacklisted-user/blacklisted-user.component';
 import { RequestRfidComponent } from '../rfid/request-rfid/request-rfid.component';
+import { PaymentControlComponent } from '../common/payment-control/payment-control.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -135,6 +136,18 @@ export const PagesRoutes: Routes = [
       urls: [
         { title: 'Request RFID', url: '/request-rfid' },
         { title: 'Request RFID' },
+      ],
+    },
+  },
+
+  {
+    path: 'payment',
+    component: PaymentControlComponent,
+    data: {
+      title: 'Payment Control',
+      urls: [
+        { title: 'Payment Control', url: '/payment' },
+        { title: 'Payment Control' },
       ],
     },
   },

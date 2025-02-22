@@ -20,6 +20,7 @@ export class RequestRfidComponent {
   recordPerPage: number = 10;
   _vehicleData: any[] = [];
   displayedColumnsComp = [
+    { "Head": "", "FieldName": "", "type": "check" },
     { "Head": "Type", "FieldName": "type", "type": "string" },
     { "Head": "Request ID", "FieldName": "requestId", "type": "number" },
     { "Head": "Request Amount", "FieldName": "reqAmt", "type": "string" },
