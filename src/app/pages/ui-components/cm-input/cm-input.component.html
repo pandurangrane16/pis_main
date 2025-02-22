@@ -4,6 +4,8 @@
   
   <mat-label [class]="_inputData.labelClass">{{_inputData.labelHeader}}</mat-label>
   
-  <input matInput [placeholder]="_inputData.placeholder" [disabled]="_inputData.isDisabled" />
+  <input matInput [placeholder]="_inputData.placeholder" [disabled]="_inputData.isDisabled" 
+  [value]="value"
+  [formControl]="formControl" />
   
 </mat-form-field>

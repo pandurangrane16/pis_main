@@ -1,5 +1,5 @@
 export class paymentControl {
-    public data : {
+    public data = {
         "amount" : "2500",
         "company":"CMS Computers India Pvt Ltd",
         "email":"cmscomputers@cms.co.in",

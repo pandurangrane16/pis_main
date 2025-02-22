@@ -84,7 +84,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'RFID Refund Request',
     iconName: 'solar:widget-add-line-duotone',
-    route: '/user/request-rfid',
+    route: '/user/rfid-refund',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',

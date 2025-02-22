@@ -11,6 +11,7 @@ import { ForeignerListComponent } from './foreigner/foreigner-list/foreigner-lis
 import { BlacklistedUserComponent } from './blacklisted-user/blacklisted-user.component';
 import { RequestRfidComponent } from '../rfid/request-rfid/request-rfid.component';
 import { PaymentControlComponent } from '../common/payment-control/payment-control.component';
+import { RfidRefundComponent } from '../rfid/rfid-refund/rfid-refund.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -148,6 +149,18 @@ export const PagesRoutes: Routes = [
       urls: [
         { title: 'Payment Control', url: '/payment' },
         { title: 'Payment Control' },
+      ],
+    },
+  },
+
+  {
+    path: 'rfid-refund',
+    component: RfidRefundComponent,
+    data: {
+      title: 'RFID Refund Request',
+      urls: [
+        { title: 'RFID Refund Request', url: '/rfid-refund' },
+        { title: 'RFID Refund Request' },
       ],
     },
   },
