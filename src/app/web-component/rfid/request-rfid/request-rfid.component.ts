@@ -5,6 +5,7 @@ import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.co
 import { requestRfid } from 'src/assets/forms_control/requestRfid';
 import { PurchasedRfidComponent } from '../purchased-rfid/purchased-rfid.component';
 import { CmModalComponent } from '../../common/cm-modal/cm-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-request-rfid',
@@ -33,7 +34,7 @@ export class RequestRfidComponent {
     { "Head": "Actions", "FieldName": "actions", "type": "button" }
   ];
   btnArray: any[] = [{ "name": "View", "icon": "icon-eye", "tip": "Click to View", "action": "view" }, { "name": "Remove", "icon": "icon-trash", "tip": "Click to Remove", "action": "remove" }];
-  constructor(public _reqData: requestRfid, private dialog: MatDialog) {
+  constructor(public _reqData: requestRfid, private dialog: MatDialog, private router:Router) {
     this._vehicleData = _reqData.data;
     this.totalRecords = _reqData.data.length;
   }
@@ -66,5 +67,9 @@ export class RequestRfidComponent {
         data: { type: "rfid" }
       });
     }
+  }
+
+  PayControl(){
+    this.router.navigate(['/user/payment']);
   }
 }
