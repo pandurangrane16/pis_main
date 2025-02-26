@@ -11,7 +11,7 @@ export class CmSelectComponent implements OnInit {
   
   selectedVal:any;
   @Input() settings:any;
-
+  @Input() labelHeader:string;
   ngOnInit(): void {
     console.log(this.settings);
   }

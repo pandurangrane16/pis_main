@@ -1,0 +1,27 @@
+<mat-card class="cardWithShadow theme-card">
+
+    <div class="row" style="padding-top: 10px;">
+        <div class="col-md-6">
+            <mat-card-header>
+                <mat-card-title class="m-b-0">RFID Refund Details</mat-card-title>
+            </mat-card-header>
+        </div>
+    </div>
+    <mat-card-content class="b-t-1">
+        <form>
+            <div class="hstack align-items-center flex-column flex-lg-row m-b-30">
+                <div class="col-md-12">
+                    <app-tables _headerName="Request RFID List" [btnArray]="btnArray" [gridArr]="_vehicleData"
+                        [headArr]="displayedColumnsComp" [totalRecords]="totalRecords" [totalPages]="totalPages"
+                        [perPage]="recordPerPage" (pager)="onPager($event)" (recordPerPage)="onRecordPageChange($event)"
+                        fieldName="id"></app-tables>
+                </div>
+            </div>
+            <div class="hstack align-items-center flex-column flex-lg-row m-b-30">
+                <div class="col-md-12">
+                    <button mat-button color="primary" class="m-r-8" (click)="PayControl()">Pay Now</button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
