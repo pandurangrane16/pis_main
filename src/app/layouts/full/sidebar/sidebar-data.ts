@@ -79,12 +79,12 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Request RFID',
     iconName: 'solar:atom-line-duotone',
-    route: '/user/request-rfid',
+    route: '/rfid/request-rfid',
   },
   {
     displayName: 'RFID Refund Request',
     iconName: 'solar:widget-add-line-duotone',
-    route: '/user/rfid-refund',
+    route: '/rfid/rfid-refund',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',
@@ -93,7 +93,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Refund Details',
     iconName: 'solar:screencast-2-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard3',
+    route: '/rfid/rfid-refund-details',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',
@@ -102,7 +102,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'View RFID',
     iconName: 'solar:screencast-2-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard3',
+    route: '/rfid/view-rfid',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',
@@ -115,7 +115,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Activation Pass',
     iconName: 'solar:atom-line-duotone',
-    route: '/dashboard',
+    route: '/pass/pass-activation',
   },
   {
     displayName: 'Link Driver',

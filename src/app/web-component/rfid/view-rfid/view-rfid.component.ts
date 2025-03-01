@@ -3,16 +3,16 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { rfidRefundRequest } from 'src/assets/forms_control/rfidRefundDetails';
+import { viewRfid } from 'src/assets/forms_control/viewRfid';
 
 @Component({
-  selector: 'app-rfid-refund-details',
+  selector: 'app-view-rfid',
   imports: [MaterialModule, AppTablesComponent],
-  templateUrl: './rfid-refund-details.component.html',
-  styleUrl: './rfid-refund-details.component.scss',
-  providers:[rfidRefundRequest]
+  templateUrl: './view-rfid.component.html',
+  styleUrl: './view-rfid.component.scss',
+  providers:[viewRfid]
 })
-export class RfidRefundDetailsComponent {
+export class ViewRfidComponent {
 
   totalPages: number = 10;
   pager: number = 1;
@@ -20,20 +20,11 @@ export class RfidRefundDetailsComponent {
   recordPerPage: number = 10;
   _vehicleData: any[] = [];
   displayedColumnsComp = [
+    { "Head": "Rfid Number", "FieldName": "rfidNo", "type": "string" },
     { "Head": "Type", "FieldName": "type", "type": "string" },
-    { "Head": "Transaction ID", "FieldName": "transactionId", "type": "number" },
-    { "Head": "Amount", "FieldName": "amount", "type": "string" },
-    { "Head": "Quantity", "FieldName": "quantity", "type": "string" },
-    { "Head": "Company ID", "FieldName": "companyId", "type": "string" },
-    { "Head": "Status", "FieldName": "status", "type": "string" },
-    { "Head": "Refund Time", "FieldName": "refundRequestDate", "type": "string" },
-    { "Head": "Approved Count", "FieldName": "approvedCount", "type": "string" },
-    { "Head": "Approved Amount", "FieldName": "approvedAmount", "type": "string" },
-    { "Head": "Reason", "FieldName": "status", "reason": "string" },
-    { "Head": "Actions", "FieldName": "actions", "type": "button" }
   ];
   btnArray: any[] = [{ "name": "View", "icon": "icon-eye", "tip": "Click to View", "action": "view" }, { "name": "Remove", "icon": "icon-trash", "tip": "Click to Remove", "action": "remove" }];
-  constructor(public _reqData: rfidRefundRequest, private dialog: MatDialog, private router: Router) {
+  constructor(public _reqData: viewRfid, private dialog: MatDialog, private router: Router) {
     this._vehicleData = _reqData.data;
     this.totalRecords = _reqData.data.length;
   }

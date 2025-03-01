@@ -18,6 +18,16 @@ export const routes: Routes = [
           import('./web-component/user/pages.routes').then((m) => m.PagesRoutes),
       },
       {
+        path: 'rfid',
+        loadChildren: () =>
+          import('./web-component/rfid/rfidpages.routes').then((m) => m.RfidPagesRoutes),
+      },
+      {
+        path: 'pass',
+        loadChildren: () =>
+          import('./web-component/pass/Passpages.routes').then((m) => m.PassPagesRoutes),
+      },
+      {
         path: 'ui-components',
         loadChildren: () =>
           import('./pages/ui-components/ui-components.routes').then(
