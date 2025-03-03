@@ -11,10 +11,10 @@
         <form>
             <div class="hstack align-items-center flex-column flex-lg-row m-b-30">
                 <div class="col-md-12">
-                    <app-tables _headerName="Request RFID List" [btnArray]="btnArray" [gridArr]="_vehicleData"
+                    <app-cm-table _headerName="Pass Activation and Deactivation" [btnArray]="btnArray" [gridArr]="_vehicleData"
                         [headArr]="displayedColumnsComp" [totalRecords]="totalRecords" [totalPages]="totalPages"
                         [perPage]="recordPerPage" (pager)="onPager($event)" (recordPerPage)="onRecordPageChange($event)"
-                        fieldName="id"></app-tables>
+                        fieldName="id"></app-cm-table>
                 </div>
             </div>
             <div class="hstack align-items-center flex-column flex-lg-row m-b-30">

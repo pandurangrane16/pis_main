@@ -4,7 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MaterialModule } from 'src/app/material.module';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatMenuModule, MatMenuPanel } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { Router } from '@angular/router';
 import { CmPaginationComponent } from '../cm-pagination/cm-pagination.component';
@@ -62,7 +62,7 @@ const PRODUCT_DATA: productsData[] = [
   templateUrl: './cm-table.component.html',
   styleUrl: './cm-table.component.scss'
 })
-export class CmTableComponent {
+export class CmTableComponent implements OnInit {
 listOfData: any;
   tooltip: string = "";
   searchText: string = "";
@@ -88,11 +88,12 @@ listOfData: any;
   @Output() btnAction = new EventEmitter<any>();
   @Output() checked = new EventEmitter<any>();
   @Output() notChecked = new EventEmitter<any>();
+menu1: MatMenuPanel<any>|null;
   constructor(private router: Router) {
 
   }
   ngOnInit(): void {
-    
+    this.headArr = this.headArr.sort(x=>x.position);
   }
   ngOnChanges(changes: SimpleChanges): void {
     if(!this.isSearch) {

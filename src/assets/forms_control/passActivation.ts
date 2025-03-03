@@ -1,6 +1,7 @@
 export class PassActivation {
     data = [
         {
+            "check":[{"label":"","disabled":false}],
             "passAllocationId": "1254537",
             "type": "Man",
             "category": "Daily",
@@ -10,9 +11,10 @@ export class PassActivation {
             "requestedQty": "1",
             "paymentDateTime": "2022/11/17 13:23",
             "status": "InitialCreate",
-            "action" : [{"label":"","type":"check","disabled":"false"},{"label":"Link User","type":"Button","disabled":"false"},{"label":"Send For Approval","type":"Button","disabled":"true"}]
+            "button" : [{"label":"Link User","type":"Button","disabled":false},{"label":"Send For Approval","type":"Button","disabled":true}]
         },
         {
+            "check":[{"label":"","disabled":true}],
             "passAllocationId": "1544425",
             "type": "Vehicle",
             "category": "Monthly",
@@ -22,7 +24,7 @@ export class PassActivation {
             "requestedQty": "1",
             "paymentDateTime": "2022/11/17 21:23",
             "status": "PaymentDone",
-            "action" : [{"label":"Link User","type":"Button","disabled":"true"},{"label":"Send For Approval","type":"Button","disabled":"true"}]
+            "action" : [{"label":"Send For Approval","type":"Button","disabled":true}]
         },
     ]
 }

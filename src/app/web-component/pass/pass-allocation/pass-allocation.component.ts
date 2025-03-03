@@ -2,15 +2,16 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
+import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { rfidRefundRequest } from 'src/assets/forms_control/rfidRefundDetails';
+import { PassActivation } from 'src/assets/forms_control/passActivation';
 
 @Component({
   selector: 'app-pass-allocation',
-  imports: [MaterialModule, AppTablesComponent],
+  imports: [MaterialModule,CmTableComponent],
   templateUrl: './pass-allocation.component.html',
   styleUrl: './pass-allocation.component.scss',
-  providers:[rfidRefundRequest]
+  providers:[PassActivation]
 })
 export class PassAllocationComponent {
 
@@ -20,20 +21,20 @@ export class PassAllocationComponent {
   recordPerPage: number = 10;
   _vehicleData: any[] = [];
   displayedColumnsComp = [
-    { "Head": "Type", "FieldName": "type", "type": "string" },
-    { "Head": "Transaction ID", "FieldName": "transactionId", "type": "number" },
-    { "Head": "Amount", "FieldName": "amount", "type": "string" },
-    { "Head": "Quantity", "FieldName": "quantity", "type": "string" },
-    { "Head": "Company ID", "FieldName": "companyId", "type": "string" },
-    { "Head": "Status", "FieldName": "status", "type": "string" },
-    { "Head": "Refund Time", "FieldName": "refundRequestDate", "type": "string" },
-    { "Head": "Approved Count", "FieldName": "approvedCount", "type": "string" },
-    { "Head": "Approved Amount", "FieldName": "approvedAmount", "type": "string" },
-    { "Head": "Reason", "FieldName": "status", "reason": "string" },
-    { "Head": "Actions", "FieldName": "actions", "type": "button" }
+    { "header": "", "fieldValue": "check", "type": "check","position":"1" },
+    { "header": "Pass Allocation ID", "fieldValue": "passAllocationId", "type": "string","position":"2" },
+    { "header": "Type", "fieldValue": "type", "type": "string","position":"3" },
+    { "header": "Category", "fieldValue": "category", "type": "string","position":"4" },
+    { "header": "Transaction ID", "fieldValue": "transactionId", "type": "string" ,"position":"5"},
+    { "header": "Approved Qty", "fieldValue": "approvedQty", "type": "string","position":"6" },
+    { "header": "Amount", "fieldValue": "amount", "type": "string","position":"7" },
+    { "header": "Requested Qty", "fieldValue": "requestedQty", "type": "string","position":"8" },
+    { "header": "Payment Time", "fieldValue": "paymentDateTime", "type": "string","position":"9" },
+    { "header": "Status", "fieldValue": "status", "type": "string","position":"10" },
+    { "header": "Actions", "fieldValue": "button", "type": "button","position":"11" }
   ];
   btnArray: any[] = [{ "name": "View", "icon": "icon-eye", "tip": "Click to View", "action": "view" }, { "name": "Remove", "icon": "icon-trash", "tip": "Click to Remove", "action": "remove" }];
-  constructor(public _reqData: rfidRefundRequest, private dialog: MatDialog, private router: Router) {
+  constructor(public _reqData: PassActivation, private dialog: MatDialog, private router: Router) {
     this._vehicleData = _reqData.data;
     this.totalRecords = _reqData.data.length;
   }
