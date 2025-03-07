@@ -11,7 +11,7 @@ export class PassActivation {
             "requestedQty": "1",
             "paymentDateTime": "2022/11/17 13:23",
             "status": "InitialCreate",
-            "button" : [{"label":"Link User","type":"Button","disabled":false},{"label":"Send For Approval","type":"Button","disabled":true}]
+            "button" : [{"label":"Link User","type":"Button","disabled":false,"return":"LU"},{"label":"Send For Approval","type":"Button","disabled":true,"return":"SFA"}]
         },
         {
             "check":[{"label":"","disabled":true}],
@@ -24,7 +24,7 @@ export class PassActivation {
             "requestedQty": "1",
             "paymentDateTime": "2022/11/17 21:23",
             "status": "PaymentDone",
-            "action" : [{"label":"Send For Approval","type":"Button","disabled":true}]
+            "action" : [{"label":"Send For Approval","type":"Button","disabled":true,"return":"SFA"}]
         },
     ]
 }

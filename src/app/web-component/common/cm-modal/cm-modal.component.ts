@@ -60,13 +60,13 @@ export class CmModalComponent implements OnInit {
     this._modal.closeAll();
   }
   uploadDoc(){
-    if(this.data.type == "doc") {
+    if(this.data.inputJson.type == "doc") {
       this._snackBar.open("Document Uploaded Successfully...!","", {
         duration: 3000,
         panelClass: ['green-snackbar'],
        });  
     } else 
-    if(this.data.type == "rfid") {
+    if(this.data.inputJson.type == "rfid") {
       this._snackBar.open("Request Submitted Successfully...!","", {
         duration: 3000,
         panelClass: ['green-snackbar'],

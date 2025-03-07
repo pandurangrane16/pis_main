@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
@@ -15,7 +16,7 @@ import { PassActivation } from 'src/assets/forms_control/passActivation';
   providers:[PassActivation]
 })
 export class PassAllocationComponent {
-
+private _snackBar = inject(MatSnackBar);
   totalPages: number = 10;
   pager: number = 1;
   totalRecords: number = 1000;
@@ -67,8 +68,11 @@ export class PassAllocationComponent {
     console.log(evt)
   }
   buttonClickedTab(evt:any) {
-    if(evt.event.label.includes('Send For Approval')){
-     
+    if(evt.event.return.includes("SFA")){
+      this._snackBar.open("Request has been sent for apporval","", {
+        duration: 3000,
+        panelClass: ['green-snackbar'],
+       });  
     }
     console.log(evt);
   }

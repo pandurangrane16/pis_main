@@ -56,7 +56,8 @@ export class CompanyDetailsComponent implements OnInit{
       placeholder : "Document Name",
       appearance : "outline",
       color : "primary",
-      formFieldClass: "w-100"
+      formFieldClass: "w-100",
+      type : "doc"
     }
     this.dialog.open(CmModalComponent, {
       data: { inputJson }, // Ensure data is passed correctly
