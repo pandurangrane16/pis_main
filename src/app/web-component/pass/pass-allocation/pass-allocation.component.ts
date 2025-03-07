@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
+import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
 import { PassActivation } from 'src/assets/forms_control/passActivation';
 
 @Component({
   selector: 'app-pass-allocation',
-  imports: [MaterialModule,CmTableComponent],
+  imports: [MaterialModule,CmTableComponent,CmButtonComponent],
   templateUrl: './pass-allocation.component.html',
   styleUrl: './pass-allocation.component.scss',
   providers:[PassActivation]
@@ -60,5 +61,15 @@ export class PassAllocationComponent {
 
   PayControl() {
     this.router.navigate(['/user/payment']);
+  }
+
+  buttonTriggered(evt:any){
+    console.log(evt)
+  }
+  buttonClickedTab(evt:any) {
+    if(evt.event.label.includes('Send For Approval')){
+     
+    }
+    console.log(evt);
   }
 }

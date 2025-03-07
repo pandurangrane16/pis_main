@@ -23,7 +23,7 @@
               <div class="row" *ngIf="head.fieldValue=='button'">
                 <span>
                   <div class="col" *ngFor="let chk of item.button">
-                    <button mat-flat-button color="primary">
+                    <button mat-flat-button color="primary" (click)="GoToBtnAction(chk,item)">
                       <mat-icon>add</mat-icon>
                       <span>{{chk.label}}</span>
                     </button>

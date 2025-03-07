@@ -129,8 +129,8 @@ menu1: MatMenuPanel<any>|null;
       this.searchWithId.emit(item);
     //this.router.navigate([this.link]);
   }
-  GoToBtnAction(action: any, data: any) {
-    let _sendData = { "action": action.action, "data": data };
+  GoToBtnAction(evt:any, data: any) {
+    let _sendData = {"event":evt, "data": data };
     this.btnAction.emit(_sendData);
   }
   Checked(eve: any, data: any) {
