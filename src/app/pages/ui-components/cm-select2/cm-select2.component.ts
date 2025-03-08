@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import {AsyncPipe, CommonModule} from '@angular/common';
 import { map, Observable, startWith } from 'rxjs';
 import { MaterialModule } from 'src/app/material.module';
@@ -15,6 +15,8 @@ export class CmSelect2Component {
   selectedItem :any;
   @Input() settings:any;
   stateCtrl = new FormControl('');
+    @Input() formGroup : FormGroup;
+    @Input() controlName: any; 
   filteredOptions: Observable<any[]>;
 
   constructor(){

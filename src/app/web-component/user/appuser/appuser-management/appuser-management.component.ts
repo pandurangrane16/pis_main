@@ -28,7 +28,6 @@ export class AppuserManagementComponent implements OnInit {
   progressInfos: any[] = [];
   message: string[] = [];
   headerName:string;
-
   previews: string[] = [];
   imageInfos?: Observable<any>;
   appUserMng=new appUserMng();

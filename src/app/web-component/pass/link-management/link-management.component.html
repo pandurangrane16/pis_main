@@ -1,1 +1,60 @@
-<p>link-management works!</p>
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">{{headerName}}</mat-card-title>
+    </mat-card-header>
+    <hr>
+    <mat-card-content class="b-t-1">
+        <form [formGroup]="linkPassForm">
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="linkMng.inputPassType" name="passType"
+                    [formGroup]="linkPassForm" controlName="passType"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                        <app-cm-select2 [settings]="linkMng.selectVehicleData" name="vehicleNumber"
+                        [formGroup]="linkPassForm" controlName="vehicleNumber"></app-cm-select2>
+                </div>
+                <div class="col-md-4">
+                        <app-cm-select2 [settings]="linkMng.selectRfidData" name="rfidNumber"
+                        [formGroup]="linkPassForm" controlName="rfidNumber"></app-cm-select2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <mat-label class="f-w-600 m-b-8 d-block">Valid From</mat-label>
+                    <mat-form-field>
+                        <input matInput formControlName="validFrom" [matDatepicker]="dp" placeholder="Valid From" [formControl]="date">
+                        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                        <mat-datepicker #dp></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <mat-label class="f-w-600 m-b-8 d-block">Valid Till</mat-label>
+                    <mat-form-field>
+                        <input matInput formControlName="validTill" [matDatepicker]="dp" placeholder="Valid Till" [formControl]="date">
+                        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                        <mat-datepicker #dp></mat-datepicker>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-select2 [settings]="linkMng.selectRfidData" name="permittedGate"
+                        [formGroup]="linkPassForm" controlName="permittedGate"></app-cm-select2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="linkMng.inputPassType" name="entryPurpose"
+                    [formGroup]="linkPassForm" controlName="entryPurpose"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-select2 [settings]="linkMng.selectRfidData" name="zone"
+                        [formGroup]="linkPassForm" controlName="zone"></app-cm-select2>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="linkMng.inputPassType" name="workPlace"
+                    [formGroup]="linkPassForm" controlName="workPlace"></app-cm-input>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

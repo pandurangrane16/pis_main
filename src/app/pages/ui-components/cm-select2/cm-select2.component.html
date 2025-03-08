@@ -1,20 +1,21 @@
-
-<mat-label>{{settings.labelHeader}}</mat-label>
-<hr>
-<mat-form-field [class]="settings.formFieldClass">
-    <input matInput
-           aria-label="State"
-           [matAutocomplete]="auto"
-           [formControl]="stateCtrl" [disabled]="settings.isDisabled" />
-    <mat-autocomplete #auto="matAutocomplete">
-      @for (state of filteredOptions | async; track state) {
-        <mat-option [value]="state.name">
-          <span>{{state.name}}</span>
-        </mat-option>
-      }
-    </mat-autocomplete>
-  </mat-form-field>
-
-  <mat-slide-toggle style="display: none;"
-    [checked]="settings.isDisabled">
-  </mat-slide-toggle>
+<div [formGroup]="formGroup">
+  <mat-label>{{settings.labelHeader}}</mat-label>
+  <hr>
+  <mat-form-field [class]="settings.formFieldClass">
+      <input matInput
+             aria-label="State"
+             [matAutocomplete]="auto"
+             [formControlName]="controlName" [disabled]="settings.isDisabled" />
+      <mat-autocomplete #auto="matAutocomplete">
+        @for (state of filteredOptions | async; track state) {
+          <mat-option [value]="state.name">
+            <span>{{state.name}}</span>
+          </mat-option>
+        }
+      </mat-autocomplete>
+    </mat-form-field>
+  
+    <mat-slide-toggle style="display: none;"
+      [checked]="settings.isDisabled">
+    </mat-slide-toggle>
+</div>

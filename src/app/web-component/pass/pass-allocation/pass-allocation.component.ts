@@ -7,6 +7,7 @@ import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-butt
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
 import { PassActivation } from 'src/assets/forms_control/passActivation';
+import { LinkManagementComponent } from '../link-management/link-management.component';
 
 @Component({
   selector: 'app-pass-allocation',
@@ -19,6 +20,7 @@ export class PassAllocationComponent {
 private _snackBar = inject(MatSnackBar);
   totalPages: number = 10;
   pager: number = 1;
+
   totalRecords: number = 1000;
   recordPerPage: number = 10;
   _vehicleData: any[] = [];
@@ -73,7 +75,19 @@ private _snackBar = inject(MatSnackBar);
         duration: 3000,
         panelClass: ['green-snackbar'],
        });  
+    } else {
+      this.LinkPass();
     }
     console.log(evt);
   }
+
+  
+  LinkPass(){
+    let inputJson = {
+          passType : "Man Pass"
+        }
+        this.dialog.open(LinkManagementComponent, {
+          data: { inputJson }, // Ensure data is passed correctly
+        });
+   }
 }

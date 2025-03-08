@@ -1,5 +1,5 @@
 import { Component, forwardRef, Input, OnInit } from '@angular/core';
-import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MaterialModule } from 'src/app/material.module';
@@ -20,7 +20,8 @@ import { MaterialModule } from 'src/app/material.module';
 export class CmInputComponent implements OnInit {
   @Input() _inputData:any;
   value: string = '';
-  @Input() formControl: FormControl; 
+  @Input() formGroup : FormGroup;
+  @Input() controlName: any; 
   ngOnInit(): void {
     
   }
