@@ -11,10 +11,11 @@ import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-se
 import { LinkManagement } from 'src/assets/forms_control/linkMng';
 import { MY_FORMATS } from '../../user/update-company/update-company.component';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
+import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
 
 @Component({
   selector: 'app-link-management',
-  imports: [MaterialModule,CommonModule,CmInputComponent,CmSelect2Component,CmButtonComponent],
+  imports: [MaterialModule,CommonModule,CmInputComponent,CmSelect2Component,CmButtonComponent,CmTableComponent],
   templateUrl: './link-management.component.html',
   styleUrl: './link-management.component.scss',
   providers: [
@@ -23,7 +24,7 @@ import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-butt
       useExisting: forwardRef(() => LinkManagementComponent),
       multi: true
     },{provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
-          {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS}
+          {provide: MAT_DATE_FORMATS, useValue: MY_FORMATS},LinkManagement
   ]
 })
 export class LinkManagementComponent implements OnInit,ControlValueAccessor {
@@ -33,7 +34,13 @@ export class LinkManagementComponent implements OnInit,ControlValueAccessor {
   linkMng=new LinkManagement();
   linkPassForm: any;
   headerName:string = "Link Pass";
-  constructor(private fb: FormBuilder,@Inject(MAT_DIALOG_DATA) public data: any){
+  gridArray : any;
+  totalPages: number = 10;
+  pager: number = 1;
+
+  totalRecords: number = 1000;
+  recordPerPage: number = 10;
+  constructor(private fb: FormBuilder,@Inject(MAT_DIALOG_DATA) public data: any, private linkData  :LinkManagement){
     
   }
 
@@ -78,11 +85,31 @@ export class LinkManagementComponent implements OnInit,ControlValueAccessor {
       console.log(this.data);
       this.linkPassForm.patchValue({
         passType : this.data.inputJson.passType,
-      })
+      });
+      this.gridArray = this.linkData.linkingData;
+      if(this.data.inputJson.linkingType == 'SL'){
+        this.headerName = "Linking Details"
+      }
     }
 
     buttonTriggered(evt:any){
       
     }
  
+    OnTabChange(status: number) {
+    }
+  
+    //Common Functionalities
+    onPager(pager: number) {
+    }
+  
+    onRecordPageChange(recordPerPage: number) {
+    }
+  
+    onPageSearch(search: string) {
+  
+    }
+    buttonClickedTab(evt:any){
+
+    }
 }

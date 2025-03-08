@@ -120,7 +120,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Link Driver',
     iconName: 'solar:widget-add-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard1',
+    route: '/pass/link-driver',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',

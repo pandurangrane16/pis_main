@@ -4,7 +4,7 @@
     </mat-card-header>
     <hr>
     <mat-card-content class="b-t-1">
-        <form [formGroup]="linkPassForm">
+        <form [formGroup]="linkPassForm" *ngIf="data.inputJson.linkingType == 'LU'">
             <div class="row">
                 <div class="col-md-4">
                     <app-cm-input [_inputData]="linkMng.inputPassType" name="passType"
@@ -63,6 +63,12 @@
                     <app-cm-button color="secondary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
                 </div>
             </div>
+        </form>
+        <form *ngIf="data.inputJson.linkingType == 'SL'">
+            <app-cm-table _headerName="Linking Details" [gridArr]="gridArray"
+            [headArr]="data.inputJson.columns" [totalRecords]="totalRecords" [totalPages]="totalPages" (btnAction)="buttonClickedTab($event)"
+            [perPage]="recordPerPage" (pager)="onPager($event)" (recordPerPage)="onRecordPageChange($event)"
+            fieldName="id"></app-cm-table>
         </form>
     </mat-card-content>
 </mat-card>

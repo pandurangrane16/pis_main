@@ -7,6 +7,39 @@ export class LinkManagement{
     "paymentType":"RFID Payment"
 }
 
+public linkingData = [{
+  "linkedTo":"9267842",
+  "type":"Man Pass",
+  "rfidNumber":"F235H7HS",
+  "passAllocationId" : "1253645",
+  "companyName" : "CMS Computers Limited",
+  "validFrom" : "08-03-2025",
+  "validTo" : "10-03-2025",
+  "linkingStatus":"Deactivated",
+  "zone":"All Zone",
+  "designation":"Manager",
+  "permittedGate":"All Gate",
+  "purpose" : "Official Work",
+  "Reason" : "",
+  "button" : [{"label":"Delete","type":"Button","disabled":false,"return":"DLT"}]
+},
+{
+  "linkedTo":"112342",
+  "type":"Man Pass",
+  "rfidNumber":"FR2564HFSY",
+  "passAllocationId" : "1253645",
+  "companyName" : "CMS Computers Limited",
+  "validFrom" : "08-03-2025",
+  "validTo" : "10-03-2025",
+  "linkingStatus":"Approved",
+  "zone":"All Zone",
+  "designation":"Assistant",
+  "permittedGate":"All Gate",
+  "purpose" : "Official Work",
+  "Reason" : "",
+  "button" : [{"label":"Delete","type":"Button","disabled":false,"return":"DLT"}]
+}]
+
     public selectVehicleData = {
         options: [{ "name": "KA19AB4511|119277", "value": "119277" },{ "name": "KA19AB4512|119278", "value": "119278" },
           { "name": "KA19AB4516|119224", "value": "119224" },{ "name": "KA19AB4513|119271", "value": "119271" },
