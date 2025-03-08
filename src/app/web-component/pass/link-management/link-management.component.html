@@ -55,6 +55,14 @@
                     [formGroup]="linkPassForm" controlName="workPlace"></app-cm-input>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <app-cm-button color="primary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Submit</app-cm-button>
+                </div>
+                <div class="col-md-2">
+                    <app-cm-button color="secondary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
+                </div>
+            </div>
         </form>
     </mat-card-content>
 </mat-card>

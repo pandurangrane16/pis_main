@@ -24,7 +24,7 @@ export class PassActivation {
             "requestedQty": "1",
             "paymentDateTime": "2022/11/17 21:23",
             "status": "PaymentDone",
-            "action" : [{"label":"Send For Approval","type":"Button","disabled":true,"return":"SFA"}]
+            "button" : [{"label":"Show Linking","type":"Button","disabled":true,"return":"SL"}]
         },
     ]
 }

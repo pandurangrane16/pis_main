@@ -10,10 +10,11 @@ import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
 import { LinkManagement } from 'src/assets/forms_control/linkMng';
 import { MY_FORMATS } from '../../user/update-company/update-company.component';
+import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 
 @Component({
   selector: 'app-link-management',
-  imports: [MaterialModule,CommonModule,CmInputComponent,CmSelect2Component],
+  imports: [MaterialModule,CommonModule,CmInputComponent,CmSelect2Component,CmButtonComponent],
   templateUrl: './link-management.component.html',
   styleUrl: './link-management.component.scss',
   providers: [
@@ -78,6 +79,10 @@ export class LinkManagementComponent implements OnInit,ControlValueAccessor {
       this.linkPassForm.patchValue({
         passType : this.data.inputJson.passType,
       })
+    }
+
+    buttonTriggered(evt:any){
+      
     }
  
 }
