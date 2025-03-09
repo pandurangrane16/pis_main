@@ -129,7 +129,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Renewal of Pass',
     iconName: 'solar:chart-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard2',
+    route: '/pass/pass-renewal',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',

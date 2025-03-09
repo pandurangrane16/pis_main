@@ -1,4 +1,5 @@
-import { Component, forwardRef, Input, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ChangeDetectorRef, Component, forwardRef, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -7,7 +8,7 @@ import { MaterialModule } from 'src/app/material.module';
 @Component({
   selector: 'app-cm-input',
   imports: [MatFormFieldModule,
-    MatInputModule,MaterialModule],
+    MatInputModule,MaterialModule,CommonModule],
     standalone:true,
   templateUrl: './cm-input.component.html',
   styleUrl: './cm-input.component.scss',
@@ -22,6 +23,9 @@ export class CmInputComponent implements OnInit {
   value: string = '';
   @Input() formGroup : FormGroup;
   @Input() controlName: any; 
+  constructor(private cdRef: ChangeDetectorRef){
+    
+  }
   ngOnInit(): void {
     
   }
@@ -57,4 +61,9 @@ export class CmInputComponent implements OnInit {
  onBlur(): void {
    this.onTouched(); // Notify Angular that the input was touched
  }
+
+ toggleDisable() {
+  this._inputData.isDisabled = !this._inputData.isDisabled;
+  this.cdRef.detectChanges();  // Manually trigger change detection if necessary
+}
 }

@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { PassAllocationComponent } from './pass-allocation/pass-allocation.component';
 import { LinkDriverComponent } from './link-driver/link-driver.component';
+import { PassRenewalComponent } from './pass-renewal/pass-renewal.component';
 
 export const PassPagesRoutes: Routes = [
   {
@@ -22,6 +23,17 @@ export const PassPagesRoutes: Routes = [
       urls: [
         { title: 'Link Driver', url: '/link-driver' },
         { title: 'Link Driver' },
+      ],
+    },
+  },
+  {
+    path: 'pass-renewal',
+    component: PassRenewalComponent,
+    data: {
+      title: 'Pass Renewal',
+      urls: [
+        { title: 'Pass Renewal', url: '/pass-renewal' },
+        { title: 'Pass Renewal' },
       ],
     },
   },
