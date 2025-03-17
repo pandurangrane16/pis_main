@@ -28,13 +28,13 @@ public linkingData = [{
     formFieldClass: "w-100",
     isDisabled: false,
     labelClass: "f-w-600 m-b-8 d-block",
-    labelHeader: "Category*",
+    labelHeader: "Category",
     placeholder: "Category",
   };
 
   public inputPassType = {
     labelClass: "f-w-600 m-b-8 d-block",
-    labelHeader: "Pass Type*",
+    labelHeader: "Pass Type",
     placeholder: "Pass Type",
     appearance: "outline",
     color: "primary",
@@ -44,7 +44,7 @@ public linkingData = [{
 
   public inputNoOfDays = {
     labelClass: "f-w-600 m-b-8 d-block",
-    labelHeader: "Number of Days*",
+    labelHeader: "Number of Days",
     placeholder: "Number of Days",
     appearance: "outline",
     color: "primary",
@@ -54,7 +54,7 @@ public linkingData = [{
 
   public inputReqQty = {
     labelClass: "f-w-600 m-b-8 d-block",
-    labelHeader: "Request Quantity*",
+    labelHeader: "Request Quantity",
     placeholder: "Request Quantity",
     appearance: "outline",
     color: "primary",
@@ -65,8 +65,8 @@ public linkingData = [{
 
   public inputAmount = {
     labelClass: "f-w-600 m-b-8 d-block",
-    labelHeader: "Pass Type*",
-    placeholder: "Pass Type",
+    labelHeader: "Amount",
+    placeholder: "Amount",
     appearance: "outline",
     color: "primary",
     formFieldClass: "w-100",
@@ -75,8 +75,8 @@ public linkingData = [{
 
   public inputPlaceOfWork = {
     labelClass: "f-w-600 m-b-8 d-block",
-    labelHeader: "Pass Type*",
-    placeholder: "Pass Type",
+    labelHeader: "Place Of Work",
+    placeholder: "Place of Work",
     appearance: "outline",
     color: "primary",
     formFieldClass: "w-100",
