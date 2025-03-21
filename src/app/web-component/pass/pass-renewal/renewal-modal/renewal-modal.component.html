@@ -6,39 +6,48 @@
     <mat-card-content class="b-t-1">
         <form [formGroup]="renewalForm">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <app-cm-input [_inputData]="renPass.inputPassType" name="passType" [formGroup]="renewalForm"
                         controlName="passType"></app-cm-input>
                 </div>
 
-                <div class="col-md-4">
-                    <app-cm-select [settings]="renPass.selectCategoryData" name="category" [formGroup]="renewalForm"
+                <div class="col-md-6">
+                    <app-cm-select [settings]="renPass.selectCategoryData" labelHeader="Pass Category" name="category" [formGroup]="renewalForm"
                         controlName="category"></app-cm-select>
                 </div>
-
-                <div class="col-md-4">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <app-cm-input [_inputData]="renPass.inputNoOfDays" name="noOfDays" [formGroup]="renewalForm"
                         controlName="noOfDays"></app-cm-input>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <app-cm-input [_inputData]="renPass.inputReqQty" name="reqQty" [formGroup]="renewalForm"
                         controlName="reqQty"></app-cm-input>
                 </div>
-                <div class="col-md-4">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
                     <app-cm-input [_inputData]="renPass.inputAmount" name="amount" [formGroup]="renewalForm"
                         controlName="amount"></app-cm-input>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-6">
                     <app-cm-input [_inputData]="renPass.inputPlaceOfWork" name="placeOfWork" [formGroup]="renewalForm"
                         controlName="placeOfWork"></app-cm-input>
                 </div>
+            </div>
+            <div class="row">
+                
                 <div class="col-md-4">
-                    <app-cm-select [settings]="renPass.selectZoneData" name="zoneAreaId" [formGroup]="renewalForm"
+                    <app-cm-select [settings]="renPass.selectZoneData" labelHeader="Zone Area" name="zoneAreaId" [formGroup]="renewalForm"
                         controlName="zoneAreaId"></app-cm-select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <app-cm-button color="primary" type="stroked" class="m-r-8"
+                        (buttonClicked)="buttonTriggered($event)">Create</app-cm-button>
                 </div>
             </div>
         </form>

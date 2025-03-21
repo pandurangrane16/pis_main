@@ -138,7 +138,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Deactivation of Pass',
     iconName: 'solar:screencast-2-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard3',
+    route: '/pass/pass-deactivation',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',
