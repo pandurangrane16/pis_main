@@ -3,6 +3,7 @@ import { PassAllocationComponent } from './pass-allocation/pass-allocation.compo
 import { LinkDriverComponent } from './link-driver/link-driver.component';
 import { PassRenewalComponent } from './pass-renewal/pass-renewal.component';
 import { DeactivationPassComponent } from './deactivation-pass/deactivation-pass.component';
+import { MonthlyBillComponent } from './monthly-bill/monthly-bill.component';
 
 export const PassPagesRoutes: Routes = [
   {
@@ -46,6 +47,17 @@ export const PassPagesRoutes: Routes = [
       urls: [
         { title: 'Pass Deactivation', url: '/pass-deactivation' },
         { title: 'Pass Deactivation' },
+      ],
+    },
+  },
+  {
+    path: 'monthly-bill',
+    component: MonthlyBillComponent,
+    data: {
+      title: 'Monthly E-Bill',
+      urls: [
+        { title: 'Monthly E-Bill', url: '/monthly-bill' },
+        { title: 'Monthly E-Bill' },
       ],
     },
   },

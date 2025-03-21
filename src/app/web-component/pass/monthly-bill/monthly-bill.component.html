@@ -1,0 +1,20 @@
+<mat-card class="cardWithShadow theme-card modal-form">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">{{headerName}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="b-t-1">
+        <form>
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- input -->
+                    <mat-label class="f-w-600 m-b-8 d-block">Select Month</mat-label>
+                    <mat-form-field>
+                        <input matInput [matDatepicker]="dp" placeholder="Issue Date" [formControl]="date">
+                        <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+                        <mat-datepicker #dp></mat-datepicker>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

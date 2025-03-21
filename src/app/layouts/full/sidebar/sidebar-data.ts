@@ -147,7 +147,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Monthly E-Bill',
     iconName: 'solar:screencast-2-line-duotone',
-    route: 'https://materialm-angular-main.netlify.app/dashboards/dashboard3',
+    route: '/pass/monthly-bill',
     chip: false,
     external: true,
     chipClass: 'bg-secondary text-white',
