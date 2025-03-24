@@ -5,10 +5,11 @@ import { DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE } from '@angular/materia
 import moment from 'moment';
 import { MaterialModule } from 'src/app/material.module';
 import { MY_FORMATS } from '../../user/update-company/update-company.component';
+import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 
 @Component({
   selector: 'app-monthly-bill',
-  imports: [MaterialModule],
+  imports: [MaterialModule,CmButtonComponent],
   templateUrl: './monthly-bill.component.html',
   styleUrl: './monthly-bill.component.scss',
   providers:[{provide: DateAdapter, useClass: MomentDateAdapter, deps: [MAT_DATE_LOCALE]},
@@ -17,4 +18,8 @@ import { MY_FORMATS } from '../../user/update-company/update-company.component';
 export class MonthlyBillComponent {
   date = new FormControl(moment());
   headerName:string = "Monthly E-Bill";
+
+  buttonTriggered(evt:any){
+
+  }
 }

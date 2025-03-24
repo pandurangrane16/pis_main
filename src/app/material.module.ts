@@ -85,7 +85,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule,
     FormsModule, 
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
   ],
 })
 export class MaterialModule {}
