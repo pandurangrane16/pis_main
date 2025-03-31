@@ -196,7 +196,7 @@ export const navItems: NavItem[] = [
   {
     displayName: 'Cargo Pass',
     iconName: 'solar:atom-line-duotone',
-    route: '/dashboard',
+    route: '/cargo/cargo-list',
   },
   {
     divider:true,

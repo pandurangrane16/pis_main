@@ -28,6 +28,11 @@ export const routes: Routes = [
           import('./web-component/pass/Passpages.routes').then((m) => m.PassPagesRoutes),
       },
       {
+        path: 'cargo',
+        loadChildren: () =>
+          import('./web-component/cargo/cargo.routes').then((m) => m.CargoRoutesModule),
+      },
+      {
         path: 'ui-components',
         loadChildren: () =>
           import('./pages/ui-components/ui-components.routes').then(

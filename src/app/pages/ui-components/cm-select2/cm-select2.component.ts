@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import {AsyncPipe, CommonModule} from '@angular/common';
 import { map, Observable, startWith } from 'rxjs';
@@ -16,7 +16,9 @@ export class CmSelect2Component {
   @Input() settings:any;
   stateCtrl = new FormControl('');
     @Input() formGroup : FormGroup;
+    selectedValue: string;
     @Input() controlName: any; 
+    @Output() returnObject= new EventEmitter<any>();
   filteredOptions: Observable<any[]>;
 
   constructor(){
@@ -31,7 +33,7 @@ export class CmSelect2Component {
     return this.settings.options.filter((state:any) => state.name.toLowerCase().includes(filterValue));
   }
   ngOnInit(): void {
-    console.log(this.settings);
+    
   }
   displayFn(option: any): string {
     return option && option.name ? option.name : '';
@@ -40,5 +42,13 @@ export class CmSelect2Component {
     const filterValue = name.toLowerCase();
 
     return this.settings.options.filter((option:any) => option.name.toLowerCase().includes(filterValue));
+  }
+
+  ChangeSelection(event: any) {
+    this.returnObject.emit(event);
+  }
+
+  displayWith(state: any): string {
+    return state ? state.name : '';  // Ensure it displays the 'name' property
   }
 }

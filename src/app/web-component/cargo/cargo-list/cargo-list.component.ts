@@ -5,13 +5,15 @@ import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
-import { PassActivation } from 'src/assets/forms_control/passActivation';
+import { cargolist } from 'src/assets/forms_control/cargolist';
+import { ViewCargoComponent } from '../view-cargo/view-cargo.component';
 
 @Component({
   selector: 'app-cargo-list',
   imports: [CmTableComponent,CmButtonComponent,MaterialModule],
   templateUrl: './cargo-list.component.html',
-  styleUrl: './cargo-list.component.scss'
+  styleUrl: './cargo-list.component.scss',
+  providers:[cargolist,ViewCargoComponent] 
 })
 export class CargoListComponent {
 private _snackBar = inject(MatSnackBar);
@@ -22,20 +24,18 @@ private _snackBar = inject(MatSnackBar);
   recordPerPage: number = 10;
   _vehicleData: any[] = [];
   displayedColumnsComp = [
-    { "header": "", "fieldValue": "check", "type": "check", "position": "1" },
-    { "header": "Pass Allocation ID", "fieldValue": "passAllocationId", "type": "string", "position": "2" },
-    { "header": "Type", "fieldValue": "type", "type": "string", "position": "3" },
-    { "header": "Category", "fieldValue": "category", "type": "string", "position": "4" },
-    { "header": "Transaction ID", "fieldValue": "transactionId", "type": "string", "position": "5" },
-    { "header": "Approved Qty", "fieldValue": "approvedQty", "type": "string", "position": "6" },
-    { "header": "Amount", "fieldValue": "amount", "type": "string", "position": "7" },
-    { "header": "Requested Qty", "fieldValue": "requestedQty", "type": "string", "position": "8" },
-    { "header": "Payment Time", "fieldValue": "paymentDateTime", "type": "string", "position": "9" },
-    { "header": "Status", "fieldValue": "status", "type": "string", "position": "10" },
-    { "header": "Actions", "fieldValue": "button", "type": "button", "position": "11" }
+    { "header": "Cargo ID", "fieldValue": "cargoId", "type": "string", "position": "1" },
+    { "header": "Passage Date", "fieldValue": "passageDate", "type": "string", "position": "2" },
+    { "header": "Company Name", "fieldValue": "companyName", "type": "string", "position": "3" },
+    { "header": "Vehicle No", "fieldValue": "vehicleNo", "type": "string", "position": "4" },
+    { "header": "Cargo Type", "fieldValue": "cargoType", "type": "string", "position": "5" },
+    { "header": "Mode", "fieldValue": "mode", "type": "string", "position": "6" },
+    { "header": "Status", "fieldValue": "status", "type": "string", "position": "7" },
+    { "header": "Rejection Reason", "fieldValue": "rejectReason", "type": "string", "position": "8" },
+    { "header": "Actions", "fieldValue": "button", "type": "button", "position": "9" }
   ];
-  btnArray: any[] = [{ "name": "View", "icon": "icon-eye", "tip": "Click to View", "action": "view" }, { "name": "Remove", "icon": "icon-trash", "tip": "Click to Remove", "action": "remove" }];
-  constructor(public _reqData: PassActivation, private dialog: MatDialog, private router: Router) {
+  btnArray: any[] = [{ "name": "View", "icon": "icon-eye", "tip": "Click to View", "action": "view" },{ "name": "Print", "icon": "icon-eye", "tip": "Print", "action": "print" }, { "name": "Cancel", "icon": "icon-trash", "tip": "Cancel", "action": "remove" }];
+  constructor(public _reqData: cargolist, private dialog: MatDialog, private router: Router) {
     this._vehicleData = _reqData.data;
     this.totalRecords = _reqData.data.length;
   }
@@ -69,6 +69,12 @@ private _snackBar = inject(MatSnackBar);
   }
 
   buttonClickedTab(evt: any) {
+    console.log(evt);
+    if(evt.event.return == "VW") {
+      this.dialog.open(ViewCargoComponent, {
+               // Ensure data is passed correctly
+            });
+    }
   }
 
 }
