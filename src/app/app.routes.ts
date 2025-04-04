@@ -18,6 +18,11 @@ export const routes: Routes = [
           import('./web-component/user/pages.routes').then((m) => m.PagesRoutes),
       },
       {
+        path: 'admin',
+        loadChildren: () =>
+          import('./web-component/admin/admin.pages.routes').then((m) => m.AdminPagesRoutes),
+      },
+      {
         path: 'rfid',
         loadChildren: () =>
           import('./web-component/rfid/rfidpages.routes').then((m) => m.RfidPagesRoutes),
