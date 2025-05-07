@@ -29,6 +29,7 @@ export class ClientDetailsComponent implements OnInit {
             contactNo : ['',Validators.required],
             address : ['',Validators.required],
           });  
+          
   }
 
   buttonTriggered(evt:any){
