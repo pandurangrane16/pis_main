@@ -1,0 +1,42 @@
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">{{headerName}}</mat-card-title>
+    </mat-card-header>
+    <hr>
+    <mat-card-content class="b-t-1">
+        <form [formGroup]="clientDetailsForm">
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputClientCode" name="clientCode"
+                    [formGroup]="clientDetailsForm" controlName="clientCode"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputName" name="name"
+                    [formGroup]="clientDetailsForm" controlName="name"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputContactNo" name="contactNo"
+                    [formGroup]="clientDetailsForm" controlName="contactNo"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputEmail" name="email"
+                    [formGroup]="clientDetailsForm" controlName="email"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputAddress" name="address"
+                    [formGroup]="clientDetailsForm" controlName="address"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <app-cm-button color="primary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Submit</app-cm-button>
+                </div>
+                <div class="col-md-2">
+                    <app-cm-button color="secondary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

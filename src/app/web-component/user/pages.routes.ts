@@ -10,6 +10,7 @@ import { CrewListComponent } from './crews/crew-list/crew-list.component';
 import { ForeignerListComponent } from './foreigner/foreigner-list/foreigner-list.component';
 import { BlacklistedUserComponent } from './blacklisted-user/blacklisted-user.component';
 import { PaymentControlComponent } from '../common/payment-control/payment-control.component';
+import { ClientDetailsComponent } from './client-details/client-details.component';
 
 export const PagesRoutes: Routes = [
   {
@@ -134,6 +135,17 @@ export const PagesRoutes: Routes = [
       urls: [
         { title: 'Payment Control', url: '/payment' },
         { title: 'Payment Control' },
+      ],
+    },
+  },
+  {
+    path: 'client-details',
+    component: ClientDetailsComponent,
+    data: {
+      title: 'Client Details',
+      urls: [
+        { title: 'Client Details', url: '/client-details' },
+        { title: 'Client Details' },
       ],
     },
   },
