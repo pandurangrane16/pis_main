@@ -25,6 +25,26 @@ public inputClientCode = {
         formFieldClass: "w-100",
         isDisabled: false
       }
+
+      public inputTagLine = {
+        labelClass: "f-w-600 m-b-8 d-block",
+        labelHeader: "Tag Line",
+        placeholder: "Tag Line",
+        appearance: "outline",
+        color: "primary",
+        formFieldClass: "w-100",
+        isDisabled: false
+      }
+
+      public inputIcon = {
+        labelClass: "f-w-600 m-b-8 d-block",
+        labelHeader: "Logo*",
+        placeholder: "Logo",
+        appearance: "outline",
+        color: "primary",
+        formFieldClass: "w-100",
+        isDisabled: false
+      }
       
       public inputContactNo = {
         labelClass: "f-w-600 m-b-8 d-block",

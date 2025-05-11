@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { vehicleManagemet } from 'src/assets/forms_control/vehicleMng';
+import { vehicleManagemet } from 'src/assets/forms_control/user/vehicleMng';
 import { VehicleManagementComponent } from '../vehicle-management/vehicle-management.component';
 import { MatDialog } from '@angular/material/dialog';
 

@@ -4,8 +4,8 @@ import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import moment from 'moment';
 import { MaterialModule } from 'src/app/material.module';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
-import { LinkManagement } from 'src/assets/forms_control/linkMng';
-import { RenewalPass } from 'src/assets/forms_control/renewalPass';
+import { LinkManagement } from 'src/assets/forms_control/user/linkMng';
+import { RenewalPass } from 'src/assets/forms_control/user/renewalPass';
 import { RenewalModalComponent } from './renewal-modal/renewal-modal.component';
 
 @Component({

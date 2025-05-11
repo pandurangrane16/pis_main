@@ -6,7 +6,7 @@ import moment from 'moment';
 import { MaterialModule } from 'src/app/material.module';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
-import { vehicleManagemet } from 'src/assets/forms_control/vehicleMng';
+import { vehicleManagemet } from 'src/assets/forms_control/user/vehicleMng';
 import { MY_FORMATS } from '../../update-company/update-company.component';
 import { Dialog } from '@angular/cdk/dialog';
 import { MAT_DIALOG_DATA } from '@angular/material/dialog';

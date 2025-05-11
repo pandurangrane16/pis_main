@@ -24,9 +24,19 @@
                     <app-cm-input [_inputData]="clientControls.inputEmail" name="email"
                     [formGroup]="clientDetailsForm" controlName="email"></app-cm-input>
                 </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputTagLine" name="tagline"
+                    [formGroup]="clientDetailsForm" controlName="tagline"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-8">
                     <app-cm-input [_inputData]="clientControls.inputAddress" name="address"
                     [formGroup]="clientDetailsForm" controlName="address"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <mat-label class="f-w-600 m-b-8 d-block">Logo</mat-label>
+                    <input type="file" placeholder="Upload Logo" />
                 </div>
             </div>
             <div class="row">

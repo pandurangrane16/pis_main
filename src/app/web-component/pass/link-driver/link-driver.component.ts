@@ -4,7 +4,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
-import { LinkDriver } from 'src/assets/forms_control/linkDriver';
+import { LinkDriver } from 'src/assets/forms_control/user/linkDriver';
 
 @Component({
   selector: 'app-link-driver',

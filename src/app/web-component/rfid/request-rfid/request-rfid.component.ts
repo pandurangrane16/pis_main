@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { requestRfid } from 'src/assets/forms_control/requestRfid';
+import { requestRfid } from 'src/assets/forms_control/user/requestRfid';
 import { PurchasedRfidComponent } from '../purchased-rfid/purchased-rfid.component';
 import { CmModalComponent } from '../../common/cm-modal/cm-modal.component';
 import { Router } from '@angular/router';

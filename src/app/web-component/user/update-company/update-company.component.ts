@@ -7,7 +7,7 @@ import { MatDatepicker } from '@angular/material/datepicker';
 import {MomentDateAdapter} from '@angular/material-moment-adapter';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
-import { companyUpdate } from 'src/assets/forms_control/companyUpdate';
+import { companyUpdate } from 'src/assets/forms_control/user/companyUpdate';
 import { CmSelectComponent } from 'src/app/pages/ui-components/cm-select/cm-select.component';
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
 export const MY_FORMATS = {

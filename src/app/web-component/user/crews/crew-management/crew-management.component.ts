@@ -4,7 +4,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { MY_FORMATS } from '../../update-company/update-company.component';
 import { MomentDateAdapter } from '@angular/material-moment-adapter';
 import { Dialog } from '@angular/cdk/dialog';
-import { appUserMng } from 'src/assets/forms_control/appuserMng';
+import { appUserMng } from 'src/assets/forms_control/user/appuserMng';
 import { Observable } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import moment from 'moment';
@@ -12,7 +12,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
 import { CommonModule } from '@angular/common';
-import { crewsMng } from 'src/assets/forms_control/crewMng';
+import { crewsMng } from 'src/assets/forms_control/user/crewMng';
 
 @Component({
   selector: 'app-crew-management',

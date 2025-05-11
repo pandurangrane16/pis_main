@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 import { MaterialModule } from 'src/app/material.module';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
-import { foreignerMng } from 'src/assets/forms_control/foreignerMng';
+import { foreignerMng } from 'src/assets/forms_control/user/foreignerMng';
 import { MY_FORMATS } from '../../update-company/update-company.component';
 
 @Component({

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { requestRfid } from 'src/assets/forms_control/requestRfid';
+import { requestRfid } from 'src/assets/forms_control/user/requestRfid';
 
 @Component({
   selector: 'app-purchased-rfid',

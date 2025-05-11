@@ -1,0 +1,31 @@
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">{{headerName}}</mat-card-title>
+    </mat-card-header>
+    <hr>
+    <mat-card-content class="b-t-1">
+        <form [formGroup]="roleMasterForm">
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputRoleName" name="roleName"
+                    [formGroup]="roleMasterForm" controlName="roleName"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputDescription" name="description"
+                    [formGroup]="roleMasterForm" controlName="description"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-toggle [settings]="clientControls.toggleIsActive"></app-cm-toggle>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <app-cm-button color="primary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Submit</app-cm-button>
+                </div>
+                <div class="col-md-2">
+                    <app-cm-button color="secondary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

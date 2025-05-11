@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { appUserMng } from 'src/assets/forms_control/appuserMng';
+import { appUserMng } from 'src/assets/forms_control/user/appuserMng';
 import { MatDialog } from '@angular/material/dialog';
 import { CrewManagementComponent } from '../crew-management/crew-management.component';
 

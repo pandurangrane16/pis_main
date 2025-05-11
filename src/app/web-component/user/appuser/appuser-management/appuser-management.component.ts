@@ -9,7 +9,7 @@ import moment from 'moment';
 import { Observable } from 'rxjs';
 import { MaterialModule } from 'src/app/material.module';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
-import { appUserMng } from 'src/assets/forms_control/appuserMng';
+import { appUserMng } from 'src/assets/forms_control/user/appuserMng';
 import { MY_FORMATS } from '../../update-company/update-company.component';
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
 

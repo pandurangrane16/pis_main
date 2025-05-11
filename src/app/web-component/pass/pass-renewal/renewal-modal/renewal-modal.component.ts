@@ -6,7 +6,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmSelectComponent } from 'src/app/pages/ui-components/cm-select/cm-select.component';
-import { RenewalPass } from 'src/assets/forms_control/renewalPass';
+import { RenewalPass } from 'src/assets/forms_control/user/renewalPass';
 
 @Component({
   selector: 'app-renewal-modal',

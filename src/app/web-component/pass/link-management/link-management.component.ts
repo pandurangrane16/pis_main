@@ -8,7 +8,7 @@ import moment from 'moment';
 import { MaterialModule } from 'src/app/material.module';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
-import { LinkManagement } from 'src/assets/forms_control/linkMng';
+import { LinkManagement } from 'src/assets/forms_control/user/linkMng';
 import { MY_FORMATS } from '../../user/update-company/update-company.component';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';

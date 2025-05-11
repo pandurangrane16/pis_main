@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
 import { VehicleManagementComponent } from '../../vehicle/vehicle-management/vehicle-management.component';
-import { appUserMng } from 'src/assets/forms_control/appuserMng';
+import { appUserMng } from 'src/assets/forms_control/user/appuserMng';
 import { MatDialog } from '@angular/material/dialog';
 import { AppuserManagementComponent } from '../appuser-management/appuser-management.component';
 

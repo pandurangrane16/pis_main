@@ -5,7 +5,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import moment from 'moment';
 import { MaterialModule } from 'src/app/material.module';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
-import { DeactivationPass } from 'src/assets/forms_control/deactivationPass';
+import { DeactivationPass } from 'src/assets/forms_control/user/deactivationPass';
 
 @Component({
   selector: 'app-deactivation-pass',

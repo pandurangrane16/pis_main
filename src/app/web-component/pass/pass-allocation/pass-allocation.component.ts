@@ -6,7 +6,7 @@ import { MaterialModule } from 'src/app/material.module';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { PassActivation } from 'src/assets/forms_control/passActivation';
+import { PassActivation } from 'src/assets/forms_control/user/passActivation';
 import { LinkManagementComponent } from '../link-management/link-management.component';
 
 @Component({

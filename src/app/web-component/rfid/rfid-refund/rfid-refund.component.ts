@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmSelectComponent } from 'src/app/pages/ui-components/cm-select/cm-select.component';
-import { refundRequest } from 'src/assets/forms_control/refundRequest';
+import { refundRequest } from 'src/assets/forms_control/user/refundRequest';
 
 @Component({
   selector: 'app-rfid-refund',

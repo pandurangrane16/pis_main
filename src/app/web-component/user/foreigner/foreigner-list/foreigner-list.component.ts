@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { foreignerMng } from 'src/assets/forms_control/foreignerMng';
+import { foreignerMng } from 'src/assets/forms_control/user/foreignerMng';
 import { ForeignerMngComponent } from '../foreigner-mng/foreigner-mng.component';
 import { MatDialog } from '@angular/material/dialog';
 

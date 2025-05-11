@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-button.component';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
-import { cargolist } from 'src/assets/forms_control/cargolist';
+import { cargolist } from 'src/assets/forms_control/user/cargolist';
 import { ViewCargoComponent } from '../view-cargo/view-cargo.component';
 
 @Component({

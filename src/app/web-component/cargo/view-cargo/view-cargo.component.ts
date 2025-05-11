@@ -9,7 +9,7 @@ import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-se
 import { MY_FORMATS } from '../../user/update-company/update-company.component';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import moment from 'moment';
-import { CartTicketManagement } from 'src/assets/forms_control/cargolist';
+import { CartTicketManagement } from 'src/assets/forms_control/user/cargolist';
 import { CmToggleComponent } from 'src/app/pages/ui-components/cm-toggle/cm-toggle.component';
 import { CommonModule } from '@angular/common';
 

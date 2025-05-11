@@ -6,7 +6,7 @@ import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-butt
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmSelect2Component } from 'src/app/pages/ui-components/cm-select2/cm-select2.component';
 import { CmTableComponent } from 'src/app/pages/ui-components/cm-table/cm-table.component';
-import { ClientDetails } from 'src/assets/forms_control/clientDetails';
+import { ClientDetails } from 'src/assets/forms_control/admin/clientDetails';
 
 @Component({
   selector: 'app-client-details',
@@ -26,8 +26,10 @@ export class ClientDetailsComponent implements OnInit {
             clientCode : ['',Validators.required],
             name : ['',Validators.required],
             email: ['',Validators.required],
+            tagline :['',Validators.required],
             contactNo : ['',Validators.required],
             address : ['',Validators.required],
+            icon : ['',Validators.required],
           });  
           
   }

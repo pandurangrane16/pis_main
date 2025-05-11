@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { rfidRefundRequest } from 'src/assets/forms_control/rfidRefundDetails';
+import { rfidRefundRequest } from 'src/assets/forms_control/user/rfidRefundDetails';
 
 @Component({
   selector: 'app-rfid-refund-details',

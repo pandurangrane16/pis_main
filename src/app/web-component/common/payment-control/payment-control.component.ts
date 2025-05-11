@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MaterialModule } from 'src/app/material.module';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
-import { paymentControl } from 'src/assets/forms_control/paymentControl';
+import { paymentControl } from 'src/assets/forms_control/user/paymentControl';
 
 @Component({
   selector: 'app-payment-control',

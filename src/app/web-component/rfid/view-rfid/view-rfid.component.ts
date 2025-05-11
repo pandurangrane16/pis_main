@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MaterialModule } from 'src/app/material.module';
 import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.component';
-import { viewRfid } from 'src/assets/forms_control/viewRfid';
+import { viewRfid } from 'src/assets/forms_control/user/viewRfid';
 
 @Component({
   selector: 'app-view-rfid',
