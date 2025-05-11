@@ -16,7 +16,7 @@ import { ClientDetails } from 'src/assets/forms_control/clientDetails';
 })
 export class ClientDetailsComponent implements OnInit {
   clientDetailsForm  :any;
-  headerName : "Client Details";
+  headerName : string= "Client Details";
   clientControls=new ClientDetails();
   constructor(private fb:FormBuilder)
   {}

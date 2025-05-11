@@ -28,7 +28,7 @@ public inputClientCode = {
       
       public inputContactNo = {
         labelClass: "f-w-600 m-b-8 d-block",
-        labelHeader: "Contact No*",
+        labelHeader: "Contact No",
         placeholder: "Contact No",
         appearance: "outline",
         color: "primary",

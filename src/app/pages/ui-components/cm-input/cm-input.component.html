@@ -1,5 +1,6 @@
 <div [formGroup]="formGroup">
-  <mat-form-field [appearance]="_inputData.appearance" [class]="_inputData.formFieldClass" [color]="_inputData.color">
+  {{value}}
+  <mat-form-field [hideRequiredMarker]="true" [appearance]="_inputData.appearance" [class]="_inputData.formFieldClass" [color]="_inputData.color">
 
     <mat-label [class]="_inputData.labelClass">{{_inputData.labelHeader}}</mat-label>
   

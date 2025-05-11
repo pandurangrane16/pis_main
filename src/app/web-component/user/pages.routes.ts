@@ -10,16 +10,25 @@ import { CrewListComponent } from './crews/crew-list/crew-list.component';
 import { ForeignerListComponent } from './foreigner/foreigner-list/foreigner-list.component';
 import { BlacklistedUserComponent } from './blacklisted-user/blacklisted-user.component';
 import { PaymentControlComponent } from '../common/payment-control/payment-control.component';
-import { ClientDetailsComponent } from './client-details/client-details.component';
-
 export const PagesRoutes: Routes = [
+  {
+    path: '',
+    component: UserDashboardComponent,
+    data: {
+      title: 'UserDashboard',
+      urls: [
+        { title: 'Dashboard', url: '/user-dash' },
+        { title: 'UserDashboard' },
+      ],
+    },
+  },
   {
     path: 'user-dash',
     component: UserDashboardComponent,
     data: {
       title: 'UserDashboard',
       urls: [
-        { title: 'Dashboard', url: '/dash-user' },
+        { title: 'Dashboard', url: '/user-dash' },
         { title: 'UserDashboard' },
       ],
     },
@@ -138,15 +147,5 @@ export const PagesRoutes: Routes = [
       ],
     },
   },
-  {
-    path: 'client-details',
-    component: ClientDetailsComponent,
-    data: {
-      title: 'Client Details',
-      urls: [
-        { title: 'Client Details', url: '/client-details' },
-        { title: 'Client Details' },
-      ],
-    },
-  },
+  
 ];
