@@ -1,1 +1,52 @@
-<p>menumaster works!</p>
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">{{headerName}}</mat-card-title>
+    </mat-card-header>
+    <hr>
+    <mat-card-content class="b-t-1">
+        <form [formGroup]="menuMasterForm">
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputMenuName" name="roleName"
+                        [formGroup]="menuMasterForm" controlName="menuName"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputMenuPath" name="menuPath"
+                        [formGroup]="menuMasterForm" controlName="menuPath"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputParentId" name="parentId"
+                        [formGroup]="menuMasterForm" controlName="parentId"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <app-cm-input [_inputData]="clientControls.inputDisplayOrder" name="displayOrder"
+                        [formGroup]="menuMasterForm" controlName="displayOrder"></app-cm-input>
+                </div>
+                <div class="col-md-4">
+                    <app-cm-toggle [settings]="clientControls.toggleIsActive"></app-cm-toggle>
+                </div>
+                <div class="row">
+                    <mat-label>Select Menu Icon*</mat-label>
+                    <mat-toolbar>
+                        <input matInput [value]="selectedFileNames.length ? selectedFileNames : ''" readonly="true" />
+                    </mat-toolbar>
+
+                    <input type="file" id="fileInput" name="fileInput" accept="image/*"
+                        (change)="selectFiles($event)" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <app-cm-button color="primary" type="stroked" class="m-r-8"
+                        (buttonClicked)="buttonTriggered($event)">Submit</app-cm-button>
+                </div>
+                <div class="col-md-2">
+                    <app-cm-button color="secondary" type="stroked" class="m-r-8"
+                        (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
