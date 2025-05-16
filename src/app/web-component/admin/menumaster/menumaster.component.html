@@ -27,16 +27,17 @@
                 <div class="col-md-4">
                     <app-cm-toggle [settings]="clientControls.toggleIsActive"></app-cm-toggle>
                 </div>
-                <div class="row">
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-4">
                     <mat-label>Select Menu Icon*</mat-label>
-                    <mat-toolbar>
-                        <input matInput [value]="selectedFileNames.length ? selectedFileNames : ''" readonly="true" />
-                    </mat-toolbar>
-
-                    <input type="file" id="fileInput" name="fileInput" accept="image/*"
-                        (change)="selectFiles($event)" />
+                </div>
+                <div class="col-md-4">
+                    <input type="file" id="fileInput" name="fileInput" accept="image/*" />
                 </div>
             </div>
+            <br>
             <div class="row">
                 <div class="col-md-2">
                     <app-cm-button color="primary" type="stroked" class="m-r-8"

@@ -16,6 +16,7 @@ export class MenumasterComponent {
   headerName: string = "Menu Management";
   menuMasterForm: any;
   clientControls = new MenuMaster();
+  selectedFileNames:any;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
