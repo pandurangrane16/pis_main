@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Signal, input, signal } from '@angular/core';
 import { CmButtonComponent } from "../../../pages/ui-components/cm-button/cm-button.component";
 import { MaterialModule } from 'src/app/material.module';
 import { RoleMaster } from 'src/assets/forms_control/admin/roleMaster';
@@ -13,7 +13,7 @@ import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.
   styleUrl: './role-master.component.scss'
 })
 export class RoleMasterComponent {
-  headerName: string = "Role Management";
+  headerName= signal("Role Master");
 
   roleMasterForm: any;
   clientControls = new RoleMaster();
