@@ -31,6 +31,7 @@
     "ng-apexcharts": "^1.7.6",
     "ng-month-picker": "^1.1.5",
     "ngx-scrollbar": "^11.0.0",
+    "ngx-toastr": "^19.0.0",
     "rxjs": "~7.5.0",
     "sass": "^1.57.1",
     "tslib": "^2.3.0",

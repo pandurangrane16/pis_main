@@ -5,10 +5,11 @@ import { CmButtonComponent } from 'src/app/pages/ui-components/cm-button/cm-butt
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 import { CmToggleComponent } from 'src/app/pages/ui-components/cm-toggle/cm-toggle.component';
 import { MenuMaster } from 'src/assets/forms_control/admin/menuMaster';
+import { CmSelect2Component } from "../../../pages/ui-components/cm-select2/cm-select2.component";
 
 @Component({
   selector: 'app-menumaster',
-  imports: [CmInputComponent, CmButtonComponent, MaterialModule, CmToggleComponent],
+  imports: [CmInputComponent, CmButtonComponent, MaterialModule, CmToggleComponent, CmSelect2Component],
   templateUrl: './menumaster.component.html',
   styleUrl: './menumaster.component.scss'
 })

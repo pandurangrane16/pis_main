@@ -21,13 +21,15 @@ import { MaterialModule } from 'src/app/material.module';
 export class CmInputComponent implements OnInit {
   @Input() _inputData:any;
   value: string = '';
+  type : string= "text";
   @Input() formGroup : FormGroup;
   @Input() controlName: any; 
   constructor(private cdRef: ChangeDetectorRef){
     
   }
   ngOnInit(): void {
-    
+    if(this._inputData.type != undefined)
+      this.type = this._inputData.type;
   }
  // Function to call when the value changes
  onChange: any = () => {};

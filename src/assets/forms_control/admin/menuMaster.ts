@@ -20,15 +20,17 @@ export class MenuMaster {
         isDisabled: false
     }
 
-    public inputParentId = {
-        labelClass: "f-w-600 m-b-8 d-block",
-        labelHeader: "Parent ID*",
-        placeholder: "Parent ID",
+
+    public selectParentId = {
+        options: [{ "name": "Registration", "value": "1" },{ "name": "Reports", "value": "3" }],
         appearance: "outline",
         color: "primary",
         formFieldClass: "w-100",
-        isDisabled: false
-    }
+        isDisabled: false,
+        labelClass: "f-w-600 m-b-8 d-block",
+        labelHeader: "Parent Menu",
+        placeholder: "Parent Menu",
+      };
 
     public inputDisplayOrder = {
         labelClass: "f-w-600 m-b-8 d-block",
