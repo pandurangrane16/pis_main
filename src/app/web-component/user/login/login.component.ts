@@ -5,13 +5,15 @@ import { MaterialModule } from 'src/app/material.module';
 import { CmInputComponent } from "../../../pages/ui-components/cm-input/cm-input.component";
 import { LoginForm } from 'src/assets/forms_control/common/loginForm';
 import { AppSettings } from 'src/app/config';
-import {ToastrService} from 'ngx-toastr';
+import {provideToastr,ToastrService} from 'ngx-toastr';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 @Component({
   selector: 'app-login',
    imports: [RouterModule, MaterialModule, FormsModule, ReactiveFormsModule, CmInputComponent],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
+  providers:[provideAnimations()]
 })
 export class LoginComponent {
 [x: string]: any;
