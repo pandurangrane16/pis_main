@@ -4,10 +4,10 @@
     </mat-card-header>
     <hr>
     <mat-card-content class="b-t-1">
-        <form [formGroup]="menuMasterForm">
+        <form  [formGroup]="menuMasterForm" *ngIf="menuMasterForm">
             <div class="row">
                 <div class="col-md-4">
-                    <app-cm-input [_inputData]="clientControls.inputMenuName" name="roleName"
+                    <app-cm-input [_inputData]="clientControls.inputMenuName" name="menuName"
                         [formGroup]="menuMasterForm" controlName="menuName"></app-cm-input>
                 </div>
                 <div class="col-md-4">
@@ -24,7 +24,8 @@
                         [formGroup]="menuMasterForm" controlName="displayOrder"></app-cm-input>
                 </div>
                 <div class="col-md-4">
-                    <app-cm-toggle [settings]="clientControls.toggleIsActive"></app-cm-toggle>
+                    <app-cm-toggle [settings]="clientControls.toggleIsActive" name="isActive" 
+                    [formGroup]="menuMasterForm" controlName="isActive"> </app-cm-toggle>
                 </div>
             </div>
             <br>
@@ -33,7 +34,7 @@
                     <mat-label>Select Menu Icon*</mat-label>
                 </div>
                 <div class="col-md-4">
-                    <input type="file" id="fileInput" name="fileInput" accept="image/*" />
+                    <input type="file" id="fileInput" name="icon" formControlName="icon" accept="image/*" />
                 </div>
             </div>
             <br>

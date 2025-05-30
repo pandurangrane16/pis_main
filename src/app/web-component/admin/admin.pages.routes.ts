@@ -2,11 +2,12 @@ import { Routes } from '@angular/router';
 import { MenumasterComponent } from './menumaster/menumaster.component';
 import { ClientDetailsComponent } from './client-details/client-details.component';
 import { RoleMasterComponent } from './role-master/role-master.component';
+import { MenuListComponent } from './menu-management/menu-list/menu-list.component';
 
 export const AdminPagesRoutes: Routes = [
   {
     path: 'menu-management',
-    component: MenumasterComponent,
+    component: MenuListComponent,
     data: {
       title: 'Menu Management',
       urls: [
