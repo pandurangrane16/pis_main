@@ -4,7 +4,7 @@
     </mat-card-header>
     <hr>
     <mat-card-content class="b-t-1">
-        <form  [formGroup]="menuMasterForm" *ngIf="menuMasterForm">
+        <form [formGroup]="menuMasterForm" *ngIf="menuMasterForm">
             <div class="row">
                 <div class="col-md-4">
                     <app-cm-input [_inputData]="clientControls.inputMenuName" name="menuName"
@@ -15,7 +15,8 @@
                         [formGroup]="menuMasterForm" controlName="menuPath"></app-cm-input>
                 </div>
                 <div class="col-md-4">
-                        <app-cm-select2 [settings]="clientControls.selectParentId" controlName="parentId"></app-cm-select2>
+                        <app-cm-select2 [settings]="clientControls.selectParentId" controlName="parentId"
+                        name="parentId" [formGroup]="menuMasterForm"></app-cm-select2>
                 </div>
             </div>
             <div class="row">

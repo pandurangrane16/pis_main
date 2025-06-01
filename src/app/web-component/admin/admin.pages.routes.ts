@@ -17,6 +17,17 @@ export const AdminPagesRoutes: Routes = [
     },
   },
   {
+    path: 'menu-master',
+    component: MenumasterComponent,
+    data: {
+      title: 'Menu Management',
+      urls: [
+        { title: 'Menu Management', url: '/menu-master' },
+        { title: 'Menu Management' },
+      ],
+    },
+  },
+  {
     path: 'client-details',
     component: ClientDetailsComponent,
     data: {

@@ -7,7 +7,8 @@ export class MenuMaster {
         appearance: "outline",
         color: "primary",
         formFieldClass: "w-100",
-        isDisabled: false
+        isDisabled: false,
+        onContainerClick: () => {  }
     }
 
     public inputMenuPath = {
@@ -17,7 +18,8 @@ export class MenuMaster {
         appearance: "outline",
         color: "primary",
         formFieldClass: "w-100",
-        isDisabled: false
+        isDisabled: false,
+        onContainerClick: () => {  }
     }
 
 
@@ -30,6 +32,7 @@ export class MenuMaster {
         labelClass: "f-w-600 m-b-8 d-block",
         labelHeader: "Parent Menu",
         placeholder: "Parent Menu",
+        onContainerClick: () => {  }
       };
 
     public inputDisplayOrder = {
@@ -39,7 +42,8 @@ export class MenuMaster {
         appearance: "outline",
         color: "primary",
         formFieldClass: "w-100",
-        isDisabled: false
+        isDisabled: false,
+        onContainerClick: () => {  }
     }
 
     public toggleIsActive = {

@@ -1,4 +1,4 @@
-<div [formGroup]="formGroup">
+<div [formGroup]="formGroup" *ngIf="formGroup">
   {{value}}
   <mat-form-field [hideRequiredMarker]="true" [appearance]="_inputData.appearance" [class]="_inputData.formFieldClass" [color]="_inputData.color">
 
