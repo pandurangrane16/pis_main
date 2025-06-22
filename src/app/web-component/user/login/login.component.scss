@@ -1,0 +1,67 @@
+.container {
+  display: flex;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 5vh;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.left, .right {
+  flex: 1;
+  padding: 40px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+}
+
+.left img {
+  max-width: 100%;
+  height: auto;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social-login {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.social-login span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.account-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.account-link a {
+  text-decoration: underline;
+  color: #3f51b5;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: white !important;
+}

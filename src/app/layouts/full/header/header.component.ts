@@ -23,7 +23,7 @@ import { MatBadgeModule } from '@angular/material/badge';
     MatBadgeModule
   ],
   templateUrl: './header.component.html',
-  encapsulation: ViewEncapsulation.None,
+  //encapsulation: ViewEncapsulation.None,
 })
 export class HeaderComponent {
   @Input() showToggle = true;

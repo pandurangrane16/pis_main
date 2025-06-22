@@ -19,6 +19,6 @@ import { AppEarningReportsComponent } from 'src/app/components/earning-reports/e
     AppEarningReportsComponent
   ],
   templateUrl: './starter.component.html',
-  encapsulation: ViewEncapsulation.None,
+  //encapsulation: ViewEncapsulation.None,
 })
 export class StarterComponent { }

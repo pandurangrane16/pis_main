@@ -4,13 +4,7 @@ import { AppTablesComponent } from 'src/app/pages/ui-components/tables/tables.co
 import { userJson } from 'src/assets/jsons/userJson';
 import { CmModalComponent } from '../../common/cm-modal/cm-modal.component';
 import {
-  MAT_DIALOG_DATA,
   MatDialog,
-  MatDialogActions,
-  MatDialogClose,
-  MatDialogContent,
-  MatDialogRef,
-  MatDialogTitle,
 } from '@angular/material/dialog';
 import { CmInputComponent } from 'src/app/pages/ui-components/cm-input/cm-input.component';
 @Component({

@@ -36,7 +36,7 @@ const TABLET_VIEW = 'screen and (min-width: 769px) and (max-width: 1024px)';
   ],
   templateUrl: './full.component.html',
   styleUrls: [],
-  encapsulation: ViewEncapsulation.None,
+  //encapsulation: ViewEncapsulation.None,
 })
 export class FullComponent implements OnInit {
   navItems = navItems;

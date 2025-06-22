@@ -1,41 +1,32 @@
-<div class="blank-layout-container justify-content-center align-items-center bg-light">
-    <div class="position-relative row w-100 h-100 bg-gredient justify-content-center">
-      <div class="col-lg-4 d-flex align-items-center" >
-        <mat-card class="cardWithShadow boxed-auth">
-          <mat-card-content class="p-32">
-            <div class="text-center" style="background-color: rgb(0, 161, 255);">
-              <a [routerLink]="['/dashboard']" >
-                <img src="./assets/images/cms-logo.png" class="align-middle m-2" alt="logo" />
-              </a>
-              <a [routerLink]="['/dashboard']" >
-                <img src="./assets/images/client-logo.jpg" class="align-middle m-2" alt="logo" width="57px" />
-              </a>
-            </div>
-  
-            <form class="m-t-30" [formGroup]="form">
-              <app-cm-input [_inputData]="loginForm.inputUsername" name="username"
-              [formGroup]="form" controlName="username"></app-cm-input>
-              <!-- password -->
-                
-              <app-cm-input [_inputData]="loginForm.inputPassword" name="password"
-              [formGroup]="form" controlName="password"></app-cm-input>
-  
-              <div class="d-flex align-items-center m-b-12">
-                <mat-checkbox color="primary">Remember this Device</mat-checkbox>
-                <a [routerLink]="['/']" class="text-primary f-w-600 text-decoration-none m-l-auto f-s-14">Forgot Password
-                  ?</a>
-              </div>
-              <a (click)="SignIn()" mat-flat-button color="primary" class="w-100">
-                Sign In
-              </a>
-              <!-- input -->
-            </form>
-            <span class="d-block f-w-500 text-center m-t-24">New to MaterialM?
-              <a [routerLink]="['/authentication/register']" class="text-decoration-none text-primary f-w-500 f-s-14">
-                Create an account</a>
-            </span>
-          </mat-card-content>
-        </mat-card>
-      </div> 
-    </div>
+<div class="container">
+  <div class="left">
+    <img src="../../../../assets/images/portLogin.jpg" alt="Login Illustration" />
   </div>
+  <div class="right">
+    <h2>Sign up</h2>
+
+    <form [formGroup]="loginForm">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Your Name</mat-label>
+        <input matInput formControlName="username" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" />
+      </mat-form-field>
+
+      <mat-checkbox formControlName="rememberMe">Remember me</mat-checkbox>
+
+      <button mat-flat-button color="primary" class="full-width">Log in</button>
+    </form>
+    <legend>
+      <div class="account-link">
+        <a href="#">Create an account</a>
+      </div>
+
+
+    </legend>
+
+  </div>
+</div>

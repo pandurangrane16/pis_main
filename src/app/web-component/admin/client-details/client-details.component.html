@@ -41,10 +41,10 @@
             </div>
             <div class="row">
                 <div class="col-md-2">
-                    <app-cm-button color="primary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Submit</app-cm-button>
+                    <app-cm-button color="primary" type="stroked" class="m-r-8" return="submit" (buttonClicked)="buttonTriggered($event)">Submit</app-cm-button>
                 </div>
                 <div class="col-md-2">
-                    <app-cm-button color="secondary" type="stroked" class="m-r-8" (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
+                    <app-cm-button color="secondary" type="stroked" class="m-r-8" return="cancel" (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
                 </div>
             </div>
         </form>

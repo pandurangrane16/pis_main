@@ -32,3 +32,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 850px;
     overflow: auto;
   }
+  
+.success-snackbar {
+  background-color: #4caf50 !important;
+  color: #fff !important; 
+}
+
+.error-snackbar {
+  background-color: #f44336 !important; 
+  color: #fff !important; 
+}
+
+.warning-snackbar {
+  background-color: #ff9800 !important; 
+  color: #fff !important; 
+}

@@ -16,7 +16,7 @@ import { MaterialModule } from 'src/app/material.module';
   standalone:true,
   templateUrl: './user-dashboard.component.html',
   styleUrl: './user-dashboard.component.scss',
-  encapsulation: ViewEncapsulation.None,
+  //encapsulation: ViewEncapsulation.None,
 })
 export class UserDashboardComponent {
 
