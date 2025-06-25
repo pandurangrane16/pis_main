@@ -22,6 +22,8 @@ export class ClientDetailsComponent implements OnInit {
   headerName : string= "Client Details";
   clientControls=new ClientDetails();
   constructor(private fb:FormBuilder)
+
+  
   {}
 
   ngOnInit(): void {
