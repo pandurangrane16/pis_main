@@ -1,1 +1,66 @@
-<p>register works!</p>
+<mat-card class="cardWithShadow theme-card">
+    <mat-card-header>
+        <mat-card-title class="m-b-0">{{headerName}}</mat-card-title>
+    </mat-card-header>
+    <hr>
+    <mat-card-content class="b-t-1">
+        <form [formGroup]="form">
+            <div class="row">
+                <div class="col-md-6">
+                    <app-cm-input [_inputData]="clientControls.inputUsername" name="userName" [formGroup]="form"
+                        controlName="userName"></app-cm-input>
+                </div>
+                <div class="col-md-6">
+                    <app-cm-input [_inputData]="clientControls.inputEmailAddress" name="email" [formGroup]="form"
+                        controlName="email"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <app-cm-input [_inputData]="clientControls.inputMobile" name="mobileNo" [formGroup]="form"
+                        controlName="mobileNo"></app-cm-input>
+                </div>
+                <div class="col-md-6">
+                     <app-cm-select2 [settings]="clientControls.selectUserType" controlName="userType"
+                        name="userType" [formGroup]="form"></app-cm-select2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <app-cm-input [_inputData]="clientControls.inputPassword" name="password" [formGroup]="form"
+                        controlName="password"></app-cm-input>
+                </div>
+                <div class="col-md-6">
+                    <app-cm-input [_inputData]="clientControls.inputConfirmedPassword" name="confirmPassword"
+                        [formGroup]="form" controlName="confirmPassword"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                     <app-cm-select2 [settings]="clientControls.selectState" controlName="state"
+                        name="state" [formGroup]="form"></app-cm-select2>
+                </div>
+                <div class="col-md-8">
+                    <app-cm-input [_inputData]="clientControls.inputCompanyName" name="companyName"
+                        [formGroup]="form" controlName="companyName"></app-cm-input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <app-cm-checkbox [_inputData]="clientControls.inputCheck" name="iagree"
+                        [formGroup]="form" controlName="iagree"></app-cm-checkbox>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <app-cm-button color="primary" type="stroked" class="m-r-8" return="submit"
+                        (buttonClicked)="buttonTriggered($event)">Submit</app-cm-button>
+                </div>
+                <div class="col-md-2">
+                    <app-cm-button color="secondary" type="stroked" class="m-r-8" return="cancel"
+                        (buttonClicked)="buttonTriggered($event)">Cancel</app-cm-button>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

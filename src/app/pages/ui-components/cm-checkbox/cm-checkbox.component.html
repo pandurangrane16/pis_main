@@ -1,0 +1,9 @@
+<div [formGroup]="formGroup" *ngIf="formGroup">
+  <mat-checkbox
+    [formControlName]="controlName"
+    [color]="_inputData?.color || 'primary'"
+    class="example-margin"
+  >
+    {{ _inputData?.label || 'Checkbox' }}
+  </mat-checkbox>
+</div>
